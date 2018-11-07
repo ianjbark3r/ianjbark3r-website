@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bootstrap-without-jquery": "^1.0.5",
+    "emailjs-com": "2.2.4",
     "mobx": "^5.6.0",
     "mobx-react": "^5.3.6",
     "react": "^16.6.0",
