@@ -1,5 +1,6 @@
 import React from 'react';
 import cardImg from '../card-placeholder.png';
+import PropTypes from 'prop-types';
 
 export default class Project extends React.Component {
   render() {
@@ -22,4 +23,12 @@ export default class Project extends React.Component {
       </div>
     )
   }
+}
+
+Project.propTypes = {
+  img: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  skills: PropTypes.object,
+  url: PropTypes.string,
 }

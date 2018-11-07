@@ -31,21 +31,16 @@ export default class contactform extends React.Component {
     contactform.submit(function(event){
     	event.preventDefault();
 
-    	const params = contactform.serializeArray().reduce(function(obj, item) {
-         obj[item.name] = item.value;
-         return obj;
-      }, {});
-
       // Change to your service ID, or keep using the default service
-      const service_id = "mailgun";
-      const template_id = "contact_form";
+      var service_id = "mailgun";
+      var template_id = "contact_form";
 
       contactform.find("button").text("Sending...");
-      emailjs.send(service_id,template_id,params)
+      emailjs.sendForm(service_id,template_id,contactform[0])
       	.then(function(){
-           alert("Sent!");
+        	alert("Sent!");
            contactform.find("button").text("Send");
-         }, function(err) {
+        }, function(err) {
            alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
            contactform.find("button").text("Send");
         });
@@ -68,7 +63,6 @@ export default class contactform extends React.Component {
               id="name"
               name="name"
               type="text"
-              required="required"
               onChange={this.handleChange}
             />
            </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 export default class NavItem extends React.Component {
   render() {
@@ -12,4 +13,10 @@ export default class NavItem extends React.Component {
       </li>
     );
   }
+}
+
+NavItem.propTypes = {
+  to: PropTypes.string,
+  title: PropTypes.string,
+  onClick: PropTypes.func
 }

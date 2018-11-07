@@ -18,7 +18,7 @@ class Projects extends React.Component {
     `
 
     const Container = styled.div`
-      padding-top: 15vh;
+      padding-top: 12.5vh;
       padding-bottom: 5vh;
     `
 
@@ -53,7 +53,7 @@ class Projects extends React.Component {
         ]
       }
     ]
-    
+
     return (
       <Background className="container-fluid">
         <Container className="container">
