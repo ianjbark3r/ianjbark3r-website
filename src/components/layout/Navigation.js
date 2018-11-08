@@ -1,21 +1,34 @@
 import React from 'react';
-import NavItem from '../NavItem';
+import NavElement from '../NavElement';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav } from 'reactstrap';
+
+  const navElements = [
+    {
+      title: "Home",
+      to: "/"
+    },
+    {
+      title: "Projects",
+      to: "projects"
+    },
+    {
+      title: "Skills",
+      to: "skills"
+    },
+    {
+      title: "Contact",
+      to: "contact"
+    }
+  ];
 
 class Navigation extends React.Component {
   constructor() {
     super()
 
-    this.toggleCollapsed = this.toggleCollapsed.bind(this);
+    this.toggleNavbar = this.toggleNavbar.bind(this);
     this.state = {
       collapsed: true
     };
-  }
-
-  toggleCollapsed() {
-    const collapsed = !this.state.collapsed;
-    this.setState({
-      collapsed: collapsed
-    });
   }
 
   getTOD() {
@@ -33,50 +46,32 @@ class Navigation extends React.Component {
     }
   }
 
-  render() {
-    const { collapsed } = this.state;
-    const navClass = collapsed ? "collapse" : "";
-    const navSettings = "navbar navbar-expand-lg fixed-top navbar-dark bg-dark shadow";
-    const navItems = [
-      {
-        title: "Home",
-        to: "/"
-      },
-      {
-        title: "Projects",
-        to: "projects"
-      },
-      {
-        title: "Skills",
-        to: "skills"
-      },
-      {
-        title: "Contact",
-        to: "contact"
-      }
-    ];
+  toggleNavbar() {
+    this.setState({
+      collapsed: !this.state.collapsed
+    });
+  }
 
+  render() {
     return (
       <header>
-        <nav className={navSettings} role="navigation">
+        <Navbar dark color="dark" className="navbar-expand-lg fixed-top shadow" role="navigation">
           <div className="container">
             <div className="navbar-header">
-              <a className="navbar-brand" style={{ color: "white" }} href="/" >Good {this.getTOD()}.</a>
+              <NavbarBrand style={{ color: "white" }} href="/" >Good {this.getTOD()}.</NavbarBrand>
             </div>
-            <button type="button" className="navbar-toggler" onClick={this.toggleCollapsed}>
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className={"navbar-collapse " + navClass} id="navbar-main">
-              <ul className="navbar-nav">
-                {navItems.map(navItem => {
+            <NavbarToggler className="navbar-toggler" onClick={this.toggleNavbar} />
+            <Collapse isOpen={!this.state.collapsed} id="navbar-main" navbar>
+              <Nav navbar>
+                {navElements.map(navElement => {
                   return (
-                    <NavItem navItem={navItem} onClick={this.toggleCollapsed}/>
+                    <NavElement navElement={navElement} onClick={this.toggleNavbar} />
                   )
                 })}
-              </ul>
-            </div>
+              </Nav>
+            </Collapse>
           </div>
-        </nav>
+        </Navbar>
       </header>
     )
   }

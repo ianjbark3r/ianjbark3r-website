@@ -1,5 +1,6 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
+import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 export default class contactform extends React.Component {
   constructor(props) {
@@ -53,27 +54,27 @@ export default class contactform extends React.Component {
       <div className="container-fluid">
         <div className="row justify-content-center">
          <div className="col-md-6 col-sm-6 col-xs-12">
-          <form id="contactform" onSubmit={this.sendMessage}>
-           <div className="form-group ">
-            <label className="control-label" for="name">
+          <Form id="contactform" onSubmit={this.sendMessage}>
+           <FormGroup>
+            <Label for="name">
              Name
-            </label>
-            <input
+            </Label>
+            <Input
               className="form-control"
               id="name"
               name="name"
               type="text"
               onChange={this.handleChange}
             />
-           </div>
-           <div className="form-group">
-            <label className="control-label requiredField" for="email">
+           </FormGroup>
+           <FormGroup>
+            <Label className="requiredField" for="email">
              Email
              <span className="asteriskField">
               *
              </span>
-            </label>
-            <input
+            </Label>
+            <Input
               className="form-control"
               id="email"
               name="emailAddress"
@@ -81,35 +82,35 @@ export default class contactform extends React.Component {
               required="required"
               onChange={this.handleChange}
             />
-           </div>
-           <div className="form-group">
-            <label className="control-label requiredField" for="message">
+           </FormGroup>
+           <FormGroup>
+            <Label className="requiredField" for="message">
              Message
              <span className="asteriskField">
               *
              </span>
-            </label>
-            <textarea
+            </Label>
+            <Input
               className="form-control"
               cols="40"
               id="message"
               name="message"
               rows="10"
               required="required"
+              type="textarea"
               onChange={this.handleChange}
-            ></textarea>
-           </div>
-           <div className="form-group">
+            ></Input>
+           </FormGroup>
+           <FormGroup>
             <div>
-             <input
-              className="btn btn-primary"
-              name="submit"
-              type="submit"
-              value="submit"
-            />
+              <Button
+                name="submit"
+                type="submit"
+                value="submit"
+              >Submit</Button>
             </div>
-           </div>
-          </form>
+           </FormGroup>
+          </Form>
          </div>
         </div>
        </div>

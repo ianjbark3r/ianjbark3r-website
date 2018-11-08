@@ -4,6 +4,7 @@ import background from '../projects-bg.jpg';
 import websiteThumb from '../personal-website-thumb.png';
 import cardImg from '../card-placeholder.png';
 import styled from 'styled-components';
+import { Container, CardDeck } from 'reactstrap';
 
 class Projects extends React.Component {
   render() {
@@ -17,9 +18,11 @@ class Projects extends React.Component {
       padding-bottom: 10vh;
     `
 
-    const Container = styled.div`
+    const Title = styled.div`
       padding-top: 12.5vh;
       padding-bottom: 5vh;
+      text-align: center;
+      font-family: "EB Garamond";
     `
 
     const projects = [
@@ -56,14 +59,17 @@ class Projects extends React.Component {
 
     return (
       <Background className="container-fluid">
-        <Container className="container">
-          <div className="card-deck">
+        <Title>
+          <h1 className="display-3">Projects</h1>
+        </Title>
+        <Container style={{ paddingBottom: "5vh" }}>
+          <CardDeck>
             {projects.map(project => {
               return (
                 <Project project={project} />
               )
             })}
-          </div>
+          </CardDeck>
         </Container>
       </Background>
     )
