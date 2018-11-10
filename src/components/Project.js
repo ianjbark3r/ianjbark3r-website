@@ -9,18 +9,17 @@ export default class Project extends React.Component {
 
     return (
       <Card className="text-center shadow-lg">
-        <CardImg top src={img} alt="project thumbnail" />
+        <a href={url}><CardImg top src={img} alt="project thumbnail" /></a>
         <CardBody>
           <CardTitle><a href={url}>{title}</a></CardTitle>
           <CardText style={{ paddingBottom: "1vh" }}>{description}</CardText>
-          <CardText style = {{ paddingBottom: "1vh" }}>
+          <CardText>
             {skills.map(skill => {
               return (
                 <p><strong>{skill}</strong></p>
               )
             })}
           </CardText>
-          <Button>Stuff</Button>
         </CardBody>
       </Card>
     )
@@ -34,3 +33,39 @@ Project.propTypes = {
   skills: PropTypes.object,
   url: PropTypes.string,
 }
+
+Card.propTypes = {
+  // Pass in a Component to override default element
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  inverse: PropTypes.bool,
+  color: PropTypes.string,
+  body: PropTypes.bool,
+  className: PropTypes.string
+};
+
+CardBody.propTypes = {
+  // Pass in a Component to override default element
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  className: PropTypes.string
+};
+
+CardImg.propTypes = {
+  // Pass in a Component to override default element
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  className: PropTypes.string,
+  // Use top or bottom to position image via "card-img-top" or "card-img-bottom"
+  top: PropTypes.bool,
+  bottom: PropTypes.bool
+};
+
+CardText.propTypes = {
+  // Pass in a Component to override default element
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  className: PropTypes.string
+};
+
+CardTitle.propTypes = {
+  // Pass in a Component to override default element
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  className: PropTypes.string
+};

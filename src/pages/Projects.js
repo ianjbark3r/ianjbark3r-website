@@ -1,12 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
+import { Container, CardColumns } from 'reactstrap';
 import Project from '../components/Project';
 import background from '../projects-bg.jpg';
 import websiteThumb from '../personal-website-thumb.png';
 import cardImg from '../card-placeholder.png';
-import styled from 'styled-components';
-import { Container, CardDeck } from 'reactstrap';
 
-class Projects extends React.Component {
+export default class Projects extends React.Component {
   render() {
     const Background = styled.div`
       background-image: url(${background});
@@ -34,23 +35,14 @@ class Projects extends React.Component {
           "ReactJS",
           "Bootstrap",
           "Styled-Components"
-        ]
+        ],
+        url: "http://www.google.com/"
       },
       {
         img: cardImg,
         title: "Austin Civic Dashboard",
-        description: "Utilizes Austin open data to create a comprehensive look at statistics related to civil issues based on location.",
+        description: "(IN DEVELOPMENT) Utilizes Austin open data to create a comprehensive look at statistics related to civil issues based on location.",
         skills: [
-          "ReactJS",
-          "RESTful Web Services"
-        ]
-      },
-      {
-        img: cardImg,
-        title: "Untitled 3rd Project",
-        description: "[TOP SECRET]",
-        skills: [
-          "NodeJS",
           "ReactJS",
           "RESTful Web Services"
         ]
@@ -63,17 +55,15 @@ class Projects extends React.Component {
           <h1 className="display-3">Projects</h1>
         </Title>
         <Container style={{ paddingBottom: "5vh" }}>
-          <CardDeck>
+          <CardColumns>
             {projects.map(project => {
               return (
                 <Project project={project} />
               )
             })}
-          </CardDeck>
+          </CardColumns>
         </Container>
       </Background>
     )
   }
 };
-
-export default Projects;

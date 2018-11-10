@@ -22,8 +22,8 @@ class Skills extends React.Component {
 
     const Title = styled.div`
       color: white;
-      padding-top: 12.5vh;
-      padding-bottom: 5vh;
+      padding-top: 20vh;
+      padding-bottom: 10vh;
       text-align: center;
       font-family: "EB Garamond";
     `
@@ -33,7 +33,7 @@ class Skills extends React.Component {
         <Title>
           <h1 className="display-3">Skills</h1>
         </Title>
-        <div className="container">
+        <div className="container" style={{ paddingBottom: "10vh" }}>
           <div className={imgContainerClasses}>
             <div className={imgClasses}>
               <a href="https://www.w3schools.com/html/html5_intro.asp" target="_blank" rel="noopener noreferrer"><img className="img-fluid" src={htmlLogo} alt="HTML5" /></a>

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import NavElement from '../NavElement';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav } from 'reactstrap';
 
@@ -21,7 +22,7 @@ import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav } from 'reactstrap';
     }
   ];
 
-class Navigation extends React.Component {
+export default class Navigation extends React.Component {
   constructor() {
     super()
 
@@ -77,4 +78,21 @@ class Navigation extends React.Component {
   }
 }
 
-export default Navigation;
+Navbar.propTypes = {
+  light: PropTypes.bool,
+  dark: PropTypes.bool,
+  fixed: PropTypes.string,
+  color: PropTypes.string,
+  role: PropTypes.string,
+  expand: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
+}
+
+NavbarBrand.propTypes = {
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
+}
+
+NavbarToggler.propTypes = {
+  type: PropTypes.string,
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
+}

@@ -1,17 +1,15 @@
 import React from 'react';
-import emailjs from 'emailjs-com';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import PropTypes from 'prop-types';
+import { Button, Form, FormGroup, Label, Input, } from 'reactstrap';
 
 export default class contactform extends React.Component {
   constructor(props) {
     super(props)
 
-    this.handleChange = this.handleChange.bind(this)
     this.state = {
       name: "",
       emailAddress: "",
-      message: "",
-      formSubmitted: false
+      message: ""
     }
   }
 
@@ -27,93 +25,51 @@ export default class contactform extends React.Component {
     })
   }
 
-  sendMessage() {
-    const contactform = document.getElementById('contactform');
-    contactform.submit(function(event){
-    	event.preventDefault();
+  handleSubmit(e) {
+    e.preventDefault();
 
-      // Change to your service ID, or keep using the default service
-      var service_id = "mailgun";
-      var template_id = "contact_form";
+    let templateParams = {
+      name: this.state.name,
+      emailAddress: this.state.emailAddress,
+      message: this.state.message
+    }
 
-      contactform.find("button").text("Sending...");
-      emailjs.sendForm(service_id,template_id,contactform[0])
-      	.then(function(){
-        	alert("Sent!");
-           contactform.find("button").text("Send");
-        }, function(err) {
-           alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
-           contactform.find("button").text("Send");
-        });
-      return false;
+    this.sendFeedback(templateParams);
+  }
+
+  sendFeedback(templateParams) {
+    const serviceID = 'mailgun'
+    const templateID = 'contact_form'
+
+    window.emailjs
+      .send(serviceID, templateID, templateParams)
+      .then(function(){
+        console.log("Form successfully submitted")
+         alert("Sent!");
+       }, function(err) {
+         alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
     });
   }
 
   render() {
     return (
-      <div className="container-fluid">
-        <div className="row justify-content-center">
-         <div className="col-md-6 col-sm-6 col-xs-12">
-          <Form id="contactform" onSubmit={this.sendMessage}>
-           <FormGroup>
-            <Label for="name">
-             Name
-            </Label>
-            <Input
-              className="form-control"
-              id="name"
-              name="name"
-              type="text"
-              onChange={this.handleChange}
-            />
-           </FormGroup>
-           <FormGroup>
-            <Label className="requiredField" for="email">
-             Email
-             <span className="asteriskField">
-              *
-             </span>
-            </Label>
-            <Input
-              className="form-control"
-              id="email"
-              name="emailAddress"
-              type="text"
-              required="required"
-              onChange={this.handleChange}
-            />
-           </FormGroup>
-           <FormGroup>
-            <Label className="requiredField" for="message">
-             Message
-             <span className="asteriskField">
-              *
-             </span>
-            </Label>
-            <Input
-              className="form-control"
-              cols="40"
-              id="message"
-              name="message"
-              rows="10"
-              required="required"
-              type="textarea"
-              onChange={this.handleChange}
-            ></Input>
-           </FormGroup>
-           <FormGroup>
-            <div>
-              <Button
-                name="submit"
-                type="submit"
-                value="submit"
-              >Submit</Button>
-            </div>
-           </FormGroup>
-          </Form>
-         </div>
-        </div>
-       </div>
+      <div className="container col-xl-4 col-lg-6 col-md-8 col-sm-12">
+        <form id="myform" style={{ paddingBottom: "5vh" }} onSubmit={this.handleSubmit.bind(this)}>
+          <FormGroup>
+            <Label for="nameField">Name</Label>
+            <Input type="name" name="name" id="nameField" placeholder="Your name" onChange={this.handleChange.bind(this)} />
+          </FormGroup>
+          <FormGroup>
+            <Label for="emailField">Email</Label>
+            <Input type="email" name="emailAddress" id="emailField" placeholder="Your email" onChange={this.handleChange.bind(this)} />
+          </FormGroup>
+          <FormGroup>
+            <Label for="messageField">Message</Label>
+            <Input type="textarea" rows="8" name="message" id="messageField" onChange={this.handleChange.bind(this)} />
+          </FormGroup>
+          <Button id="button">Submit</Button>
+        </form>
+      </div>
     )
   }
 };

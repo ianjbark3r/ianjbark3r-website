@@ -16,13 +16,13 @@ const months = [
   ];
 
 const days = [
+  'Sunday',
   'Monday',
   'Tuesday',
   'Wednesday',
   'Thursday',
   'Friday',
-  'Saturday',
-  'Sunday'
+  'Saturday'
 ]
 
 class GreetingDate extends React.Component{
@@ -47,7 +47,7 @@ class GreetingDate extends React.Component{
     const month = months[d.getMonth()];
     const year = d.getFullYear();
 
-    return <h3>It is {weekday}, {month} {this.setDate()}, {year} and</h3>
+    return <h3><span style={{ display:"inline-block" }}>It is {weekday}, </span><span style={{ display:"inline-block" }}>{month} {this.setDate()}, {year}</span> and</h3>
   }
 }
 
