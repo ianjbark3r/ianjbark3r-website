@@ -47,7 +47,12 @@ class GreetingDate extends React.Component{
     const month = months[d.getMonth()];
     const year = d.getFullYear();
 
-    return <h3><span style={{ display:"inline-block" }}>It is {weekday}, </span><span style={{ display:"inline-block" }}>{month} {this.setDate()}, {year}</span> and</h3>
+    return(
+      <div>
+        <h3><span style={{ display:"inline-block" }}>It is {weekday},</span></h3>
+        <h3><span style={{ display:"inline-block" }}> {month} {this.setDate()}, {year}</span> and</h3>
+      </div>
+    )
   }
 }
 

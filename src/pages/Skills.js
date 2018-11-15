@@ -22,10 +22,14 @@ class Skills extends React.Component {
 
     const Title = styled.div`
       color: white;
-      padding-top: 20vh;
-      padding-bottom: 10vh;
       text-align: center;
       font-family: "EB Garamond";
+      padding-top: 12.5vh;
+      padding-bottom: 5vh;
+      @media (min-width: 768px) {
+        padding-top: 20vh;
+        padding-bottom: 10vh;
+      }
     `
 
     return (

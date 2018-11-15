@@ -1,6 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { Button, Form, FormGroup, Label, Input, } from 'reactstrap';
+import { Button, FormGroup, Label, Input, } from 'reactstrap';
 
 export default class contactform extends React.Component {
   constructor(props) {

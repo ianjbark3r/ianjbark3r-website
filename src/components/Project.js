@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, CardImg, CardText, CardBody,
-  CardTitle, Button } from 'reactstrap';
+  CardTitle } from 'reactstrap';
 
 export default class Project extends React.Component {
   render() {
