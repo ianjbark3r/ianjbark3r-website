@@ -4,7 +4,7 @@ import { Container, CardColumns } from 'reactstrap';
 import Project from '../components/Project';
 import background from '../projects-bg.jpg';
 import websiteThumb from '../personal-website-thumb.png';
-import cardImg from '../card-placeholder.png';
+import underDev from '../under-development.png'
 
 export default class Projects extends React.Component {
   render() {
@@ -31,6 +31,18 @@ export default class Projects extends React.Component {
         title: "Professional Website",
         description: "My very first ReactJS application, built with Bootstrap styles and a little elbow grease. Dynamic contents and fully responsive layout.",
         skills: [
+          "ReactJS",
+          "Bootstrap",
+          "Styled-Components"
+        ],
+        url: "https://ianjbaker.com"
+      },
+      {
+        img: underDev,
+        title: "WhoIsThatSuperhero",
+        description: "Simple React app that uses the Marvel API to help casual movie fans make sense of The Most Ambitious Crossover Event in History.",
+        skills: [
+          "Marvel API",
           "ReactJS",
           "Bootstrap",
           "Styled-Components"
