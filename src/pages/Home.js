@@ -4,7 +4,7 @@ import GreetingActivity from '../components/GreetingActivity';
 import cover from '../forest-cover.jpg';
 import styled from 'styled-components';
 
-class Home extends React.Component {
+export default class Home extends React.Component {
   render() {
     const Background = styled.div`
       background-image: url(${cover});
@@ -33,5 +33,3 @@ class Home extends React.Component {
     )
   }
 };
-
-export default Home;

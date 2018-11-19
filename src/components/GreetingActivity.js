@@ -15,7 +15,7 @@ const months = [
   'December'
   ];
 
-class GreetingActivity extends React.Component {
+export default class GreetingActivity extends React.Component {
   getActivity() {
     const d = new Date();
     const month = months[d.getMonth()];
@@ -59,5 +59,3 @@ class GreetingActivity extends React.Component {
     return <h3>is probably {this.getActivity()}.</h3>
   }
 }
-
-export default GreetingActivity;

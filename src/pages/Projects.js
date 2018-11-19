@@ -28,14 +28,14 @@ export default class Projects extends React.Component {
     const projects = [
       {
         img: websiteThumb,
-        title: "Personal Website",
+        title: "Professional Website",
         description: "My very first ReactJS application, built with Bootstrap styles and a little elbow grease. Dynamic contents and fully responsive layout.",
         skills: [
           "ReactJS",
           "Bootstrap",
           "Styled-Components"
         ],
-        url: "http://www.google.com/"
+        url: "https://ianjbaker.com"
       }
     ]
 

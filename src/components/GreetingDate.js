@@ -25,7 +25,7 @@ const days = [
   'Saturday'
 ]
 
-class GreetingDate extends React.Component{
+export default class GreetingDate extends React.Component{
   setDate() {
     const d = new Date();
     const day = d.getDate();
@@ -55,5 +55,3 @@ class GreetingDate extends React.Component{
     )
   }
 }
-
-export default GreetingDate;

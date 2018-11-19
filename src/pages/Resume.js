@@ -8,7 +8,7 @@ import jestLogo from '../jest-logo.png';
 import educationbg from '../education-bg.jpg';
 import skillsbg from '../skills-bg.jpg';
 
-class Skills extends React.Component {
+export default class Skills extends React.Component {
   render() {
     const imgClasses = "m-4 w-auto d-inline-block";
     const imgContainerClasses = "d-sm-flex flex-row justify-content-center";
@@ -186,5 +186,3 @@ class Skills extends React.Component {
     )
   }
 };
-
-export default Skills;

@@ -2,7 +2,7 @@ import React from 'react';
 import ContactForm from '../components/ContactForm.js';
 import styled from 'styled-components';
 
-class Contact extends React.Component {
+export default class Contact extends React.Component {
   render() {
     const Background = styled.div`
       background-color: #DDDDDD;
@@ -27,5 +27,3 @@ class Contact extends React.Component {
     )
   }
 };
-
-export default Contact;
