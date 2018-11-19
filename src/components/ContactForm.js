@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Button, FormGroup, Label, Input, } from 'reactstrap';
 
 export default class contactform extends React.Component {
@@ -8,7 +9,8 @@ export default class contactform extends React.Component {
     this.state = {
       name: "",
       emailAddress: "",
-      message: ""
+      message: "",
+      submitted: false
     }
   }
 
@@ -34,6 +36,9 @@ export default class contactform extends React.Component {
     }
 
     this.sendFeedback(templateParams);
+    this.setState({
+      submitted: true
+    });
   }
 
   sendFeedback(templateParams) {
@@ -51,6 +56,11 @@ export default class contactform extends React.Component {
   }
 
   render() {
+    const Message = styled.div`
+      text-align: center;
+    `
+
+    if (!this.state.submitted) {
     return (
       <div className="container col-xl-4 col-lg-6 col-md-8 col-sm-12">
         <form id="myform" style={{ paddingBottom: "5vh" }} onSubmit={this.handleSubmit.bind(this)}>
@@ -69,6 +79,13 @@ export default class contactform extends React.Component {
           <Button id="button">Submit</Button>
         </form>
       </div>
-    )
+      )
+    } else {
+      return (
+        <div className="container">
+          <Message>Thank you for your message!</Message>
+        </div>
+      )
+    }
   }
 };

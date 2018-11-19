@@ -13,8 +13,8 @@ import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav } from 'reactstrap';
       to: "projects"
     },
     {
-      title: "Skills",
-      to: "skills"
+      title: "Résumé",
+      to: "resume"
     },
     {
       title: "Contact",

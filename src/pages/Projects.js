@@ -36,15 +36,6 @@ export default class Projects extends React.Component {
           "Styled-Components"
         ],
         url: "http://www.google.com/"
-      },
-      {
-        img: cardImg,
-        title: "Austin Civic Dashboard",
-        description: "(IN DEVELOPMENT) Utilizes Austin open data to create a comprehensive look at statistics related to civil issues based on location.",
-        skills: [
-          "ReactJS",
-          "RESTful Web Services"
-        ]
       }
     ]
 
