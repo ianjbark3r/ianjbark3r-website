@@ -11,7 +11,7 @@ import skillsbg from '../skills-bg.jpg';
 class Skills extends React.Component {
   render() {
     const imgClasses = "m-4 w-auto d-inline-block";
-    const imgContainerClasses = "d-md-flex flex-row justify-content-center";
+    const imgContainerClasses = "d-sm-flex flex-row justify-content-center";
     const contentContainerClasses = "container-fluid col-lg-6 col-md-8 col-sm-12"
 
     const PageTitle = styled.div`
@@ -99,7 +99,7 @@ class Skills extends React.Component {
             <SectionTitle>
               <h1 className="display-4">Education</h1>
             </SectionTitle>
-            <h2>B.S. in Chemical Engineering (2011)</h2>
+            <h2><strong>B.S. in Chemical Engineering (2011)</strong></h2>
             <h3>Iowa State University</h3>
             <p>Published highly-technical computerized research as an undergraduate student (“Mechanism of Xylobiose Hydrolysis by GH43 β-Xylosidase”, J. Phys. Chem. B)</p>
           </div>
@@ -109,7 +109,7 @@ class Skills extends React.Component {
             <SectionTitle>
               <h1 className="display-4">Experience</h1>
             </SectionTitle>
-            <h2>Iowa State University Dept. of Chemical Engineering</h2>
+            <h2><strong>Iowa State University Dept. of Chemical Engineering</strong></h2>
             <h3>Researcher</h3>
             <p>Jan 2009–May 2010</p>
             <p>Used university supercomputer to model quantum mechanical interaction of substrate chemical in a catalyst enzyme. Worked exclusively in terminal environment for the duration of research assignment. One of a small percentage of undergraduate students to have research published.</p>
