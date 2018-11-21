@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import NavElement from '../NavElement';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav } from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, NavItem, NavLink, Nav } from 'reactstrap';
+import gitLogo from '../../github-logo.png';
 
   const navElements = [
     {
@@ -59,7 +60,7 @@ export default class Navigation extends React.Component {
         <Navbar dark color="dark" className="navbar-expand-lg fixed-top shadow" role="navigation">
           <div className="container">
             <div className="navbar-header">
-              <NavbarBrand style={{ color: "white" }} href="/" >Good {this.getTOD()}.</NavbarBrand>
+              <NavbarBrand style={{ color: "white" }} href="/" ><a href="https://github.com/ianjbark3r"><img src={gitLogo} style={{ width: 20 }}/></a></NavbarBrand>
             </div>
             <NavbarToggler className="navbar-toggler" onClick={this.toggleNavbar} />
             <Collapse isOpen={!this.state.collapsed} id="navbar-main" navbar>
