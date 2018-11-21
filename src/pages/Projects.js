@@ -4,6 +4,7 @@ import { Container, CardColumns } from 'reactstrap';
 import Project from '../components/Project';
 import background from '../projects-bg.jpg';
 import websiteThumb from '../personal-website-thumb.png';
+import heroThumb from '../whoisthatsuperhero-thumb.png'
 import underDev from '../under-development.png'
 
 export default class Projects extends React.Component {
@@ -38,7 +39,7 @@ export default class Projects extends React.Component {
         url: "https://ianjbaker.com"
       },
       {
-        img: underDev,
+        img: heroThumb,
         title: "WhoIsThatSuperhero",
         description: "Simple React app that uses the Marvel API to help casual movie fans make sense of The Most Ambitious Crossover Event in History.",
         skills: [
@@ -47,7 +48,7 @@ export default class Projects extends React.Component {
           "Bootstrap",
           "Styled-Components"
         ],
-        url: "https://ianjbaker.com"
+        url: "https://whoisthatsuperhero.firebaseapp.com/"
       }
     ]
 
