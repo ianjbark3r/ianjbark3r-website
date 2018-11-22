@@ -32,7 +32,11 @@ export default class GreetingActivity extends React.Component {
       return 'feeding reindeer';
     } else if (day === 0 || day === 6) {
       return 'begrudgingly relaxing';
-    } else if (day < 6 && day > 0 && hour >= 6 && hour < 12) {
+    } else if (day < 6 && day > 0 && hour < 7) {
+      return 'sleeping';
+    } else if (day < 6 && day > 0 && hour === 7) {
+      return 'eating breakfast';
+    } else if (day < 6 && day > 0 && hour > 7 && hour < 12) {
       return 'coding';
     } else if (day < 6 && day > 0 && hour === 12) {
       return 'eating lunch';
