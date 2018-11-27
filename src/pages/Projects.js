@@ -40,7 +40,7 @@ export default class Projects extends React.Component {
       },
       {
         img: heroThumb,
-        title: "WhoIsThatSuperhero",
+        title: "WhoIsThatSuperhero (IN DEVELOPMENT)",
         description: "Simple React app that uses the Marvel API to help casual movie fans make sense of The Most Ambitious Crossover Event in History.",
         skills: [
           "Marvel API",

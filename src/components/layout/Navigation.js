@@ -60,7 +60,7 @@ export default class Navigation extends React.Component {
         <Navbar dark color="dark" className="navbar-expand-lg fixed-top shadow" role="navigation">
           <div className="container">
             <div className="navbar-header">
-              <NavbarBrand style={{ color: "white" }} href="/" ><a href="https://github.com/ianjbark3r"><img src={gitLogo} style={{ width: 20 }}/></a></NavbarBrand>
+              <NavbarBrand style={{ color: "white" }} href="/" ><a href="https://github.com/ianjbark3r" target="_blank"><img src={gitLogo} style={{ width: 20 }}/></a></NavbarBrand>
             </div>
             <NavbarToggler className="navbar-toggler" onClick={this.toggleNavbar} />
             <Collapse isOpen={!this.state.collapsed} id="navbar-main" navbar>
