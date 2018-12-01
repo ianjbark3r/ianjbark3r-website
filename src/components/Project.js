@@ -26,46 +26,11 @@ export default class Project extends React.Component {
   }
 }
 
-Project.propTypes = {
-  img: PropTypes.string,
-  title: PropTypes.string,
-  description: PropTypes.string,
-  skills: PropTypes.object,
-  url: PropTypes.string,
-}
-
 Card.propTypes = {
-  // Pass in a Component to override default element
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  inverse: PropTypes.bool,
-  color: PropTypes.string,
-  body: PropTypes.bool,
-  className: PropTypes.string
-};
-
-CardBody.propTypes = {
-  // Pass in a Component to override default element
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string
 };
 
 CardImg.propTypes = {
-  // Pass in a Component to override default element
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
-  // Use top or bottom to position image via "card-img-top" or "card-img-bottom"
-  top: PropTypes.bool,
-  bottom: PropTypes.bool
-};
-
-CardText.propTypes = {
-  // Pass in a Component to override default element
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  className: PropTypes.string
-};
-
-CardTitle.propTypes = {
-  // Pass in a Component to override default element
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  className: PropTypes.string
+  top: PropTypes.bool
 };

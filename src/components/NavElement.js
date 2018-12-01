@@ -17,7 +17,5 @@ export default class NavElement extends React.Component {
 }
 
 NavElement.propTypes = {
-  to: PropTypes.string,
-  title: PropTypes.string,
   onClick: PropTypes.func
 }

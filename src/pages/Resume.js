@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import htmlLogo from '../html-logo.png';
-import cssLogo from '../css-logo.png';
+import bootstrapLogo from '../bootstrap-logo.png';
 import reactLogo from '../react-logo.png';
 import nodeLogo from '../node-logo.png';
 import jestLogo from '../jest-logo.png';
@@ -11,7 +10,7 @@ import skillsbg from '../skills-bg.jpg';
 export default class Skills extends React.Component {
   render() {
     const imgClasses = "m-4 w-auto d-inline-block";
-    const imgContainerClasses = "d-sm-flex flex-row justify-content-center";
+    const imgContainerClasses = "d-sm-flex flex-row justify-content-center align-items-center";
     const contentContainerClasses = "container-fluid col-lg-6 col-md-8 col-sm-12"
 
     const PageTitle = styled.div`
@@ -122,10 +121,7 @@ export default class Skills extends React.Component {
           <div className="container" style={{ paddingBottom: "5vh" }}>
             <div className={imgContainerClasses}>
               <div className={imgClasses}>
-                <a href="https://www.w3schools.com/html/html5_intro.asp" target="_blank" rel="noopener noreferrer"><img className="img-fluid" src={htmlLogo} alt="HTML5" /></a>
-              </div>
-              <div className={imgClasses}>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3" target="_blank" rel="noopener noreferrer"><img className="img-fluid" src={cssLogo} alt="CSS3" /></a>
+                <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer"><img className="img-fluid" src={bootstrapLogo} alt="Bootstrap 4" /></a>
               </div>
               <div className={imgClasses}>
                 <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer"><img className="img-fluid" src={reactLogo} alt="ReactJS" /></a>

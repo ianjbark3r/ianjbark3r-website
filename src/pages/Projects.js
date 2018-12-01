@@ -40,13 +40,12 @@ export default class Projects extends React.Component {
       },
       {
         img: heroThumb,
-        title: "WhoIsThatSuperhero (IN DEVELOPMENT)",
+        title: "IN DEVELOPMENT: WhoIsThatSuperhero",
         description: "Simple React app that uses the Marvel API to help casual movie fans make sense of The Most Ambitious Crossover Event in History.",
         skills: [
           "Marvel API",
           "ReactJS",
-          "Bootstrap",
-          "Styled-Components"
+          "Redux"
         ],
         url: "https://whoisthatsuperhero.firebaseapp.com/"
       }
