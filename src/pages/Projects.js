@@ -30,7 +30,7 @@ export default class Projects extends React.Component {
       {
         img: websiteThumb,
         title: "Professional Website",
-        description: "My very first ReactJS application, built with Bootstrap styles and a little elbow grease. Dynamic contents and fully responsive layout.",
+        description: "Single-page app built with Bootstrap styles and a little elbow grease. Performant code, fully responsive layout, custom CSS with Styled-Components, and serverless JavaScript contact form.",
         skills: [
           "ReactJS",
           "Bootstrap",
@@ -40,8 +40,8 @@ export default class Projects extends React.Component {
       },
       {
         img: heroThumb,
-        title: "IN DEVELOPMENT: WhoIsThatSuperhero",
-        description: "Simple React app that uses the Marvel API to help casual movie fans make sense of The Most Ambitious Crossover Event in History.",
+        title: "WhoIsThatSuperhero",
+        description: "React app that uses the Marvel API to help casual movie fans make sense of The Most Ambitious Crossover Event in History. Async API call handling in Redux, advanced React architecture, and Firebase deployment.",
         skills: [
           "Marvel API",
           "ReactJS",

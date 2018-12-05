@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import bootstrapLogo from '../bootstrap-logo.png';
 import reactLogo from '../react-logo.png';
 import nodeLogo from '../node-logo.png';
+import reduxLogo from '../redux-logo.png'
 import jestLogo from '../jest-logo.png';
 import educationbg from '../education-bg.jpg';
 import skillsbg from '../skills-bg.jpg';
@@ -125,6 +126,9 @@ export default class Skills extends React.Component {
               </div>
               <div className={imgClasses}>
                 <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer"><img className="img-fluid" src={reactLogo} alt="ReactJS" /></a>
+              </div>
+              <div className={imgClasses}>
+                <a href="https://redux.js.org/" target="_blank" rel="noopener noreferrer"><img className="img-fluid" src={reduxLogo} alt="Redux" /></a>
               </div>
               <div className={imgClasses}>
                 <a href="https://jestjs.io/" target="_blank" rel="noopener noreferrer"><img className="img-fluid" src={jestLogo} alt="Jest" /></a>
