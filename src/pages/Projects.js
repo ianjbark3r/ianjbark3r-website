@@ -4,8 +4,8 @@ import { Container, CardColumns } from 'reactstrap';
 import Project from '../components/Project';
 import background from '../projects-bg.jpg';
 import websiteThumb from '../personal-website-thumb.png';
-import heroThumb from '../whoisthatsuperhero-thumb.png'
-import underDev from '../under-development.png'
+import heroThumb from '../whoisthatsuperhero-thumb.png';
+import underDev from '../under-development.png';
 
 export default class Projects extends React.Component {
   render() {
@@ -28,26 +28,37 @@ export default class Projects extends React.Component {
 
     const projects = [
       {
-        img: websiteThumb,
-        title: "Professional Website",
-        description: "Single-page app built with Bootstrap styles and a little elbow grease. Performant code, fully responsive layout, custom CSS with Styled-Components, and serverless JavaScript contact form.",
+        img: underDev,
+        title: "The Habit Journey",
+        description: 'Lifestyle tool designed to help users build healthy habits (based on the book "Atomic Habits" by James Clear). Application layer connects to an Express.js API and MongoDB storage.',
         skills: [
-          "ReactJS",
-          "Bootstrap",
-          "Styled-Components"
+          "React",
+          "Express.js",
+          "MongoDB"
         ],
-        url: "https://ianjbaker.com"
+        url: null
       },
       {
         img: heroThumb,
         title: "WhoIsThatSuperhero",
-        description: "React app that uses the Marvel API to help casual movie fans make sense of The Most Ambitious Crossover Event in History. Async API call handling in Redux, advanced React architecture, and Firebase deployment.",
+        description: "React app that uses the Marvel API to help casual movie fans make sense of The Most Ambitious Crossover Event in History. Application state managed with Redux, API calls using Fetch.",
         skills: [
           "Marvel API",
-          "ReactJS",
+          "React",
           "Redux"
         ],
         url: "https://whoisthatsuperhero.firebaseapp.com/"
+      },
+      {
+        img: websiteThumb,
+        title: "Professional Website",
+        description: "Single-page app built with Bootstrap styles and a little elbow grease. Performant code, fully responsive layout, custom CSS with Styled-Components, and serverless JavaScript contact form.",
+        skills: [
+          "React",
+          "Bootstrap",
+          "Styled-Components"
+        ],
+        url: "https://ianjbaker.com"
       }
     ]
 
