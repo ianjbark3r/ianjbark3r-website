@@ -5,6 +5,7 @@ import reactLogo from '../react-logo.png';
 import nodeLogo from '../node-logo.png';
 import reduxLogo from '../redux-logo.png'
 import jestLogo from '../jest-logo.png';
+import pyLogo from '../python-logo.png'
 import educationbg from '../education-bg.jpg';
 import skillsbg from '../skills-bg.jpg';
 
@@ -135,6 +136,9 @@ export default class Skills extends React.Component {
               </div>
               <div className={imgClasses}>
                 <a href="https://nodejs.org/en/" target="_blank" rel="noopener noreferrer"><img className="img-fluid" src={nodeLogo} alt="NodeJS" /></a>
+              </div>
+              <div className={imgClasses}>
+                <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer"><img className="img-fluid" src={pyLogo} alt="Python" /></a>
               </div>
             </div>
           </div>
