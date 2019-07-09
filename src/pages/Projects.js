@@ -5,6 +5,7 @@ import Project from '../components/Project';
 import background from '../projects-bg.jpg';
 import websiteThumb from '../personal-website-thumb.png';
 import heroThumb from '../whoisthatsuperhero-thumb.png';
+import habitThumb from '../thehabitjourney-thumb.png';
 import underDev from '../under-development.png';
 
 export default class Projects extends React.Component {
@@ -12,7 +13,7 @@ export default class Projects extends React.Component {
     const Background = styled.div`
       background-image: url(${background});
       background-size: cover;
-      background-position: center;
+      background-position: left;
       background-attachment: fixed;
       overflow: auto;
       height: 100vh;
@@ -28,7 +29,7 @@ export default class Projects extends React.Component {
 
     const projects = [
       {
-        img: underDev,
+        img: habitThumb,
         title: "The Habit Journey",
         description: 'Lifestyle tool designed to help users build healthy habits (based on the book "Atomic Habits" by James Clear). Application layer connects to an Express.js API and MongoDB storage.',
         skills: [
@@ -36,7 +37,7 @@ export default class Projects extends React.Component {
           "Express.js",
           "MongoDB"
         ],
-        url: null
+        url: "https://the-habit-journey.web.app/"
       },
       {
         img: heroThumb,

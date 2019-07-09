@@ -60,6 +60,6 @@ export default class GreetingActivity extends React.Component {
   }
 
   render() {
-    return <h3>is probably {this.getActivity()}.</h3>
+    return <h3 style={{ textShadow:'1px 1px 2px #000000' }}>is probably {this.getActivity()}.</h3>
   }
 }

@@ -19,6 +19,7 @@ export default class Home extends React.Component {
       padding-top: 25vh;
       text-align: center;
       font-family: "EB Garamond";
+      text-shadow: 2px 2px 4px #000;
     `
 
     return (

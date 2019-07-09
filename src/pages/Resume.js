@@ -46,9 +46,10 @@ export default class Skills extends React.Component {
       p {
         font-size: 1.5rem;
       }
+      text-shadow: 2px 2px 4px #000000;
     `
 
-    const ExperienceSection = styled.div`
+    const SkillsSummary = styled.div`
       background-color: #EEEEEE;
       font-family: "EB Garamond";
       padding-bottom: 3rem;
@@ -57,7 +58,7 @@ export default class Skills extends React.Component {
       }
     `
 
-    const SkillsSection = styled.div`
+    const LanguagesAndFrameworksSection = styled.div`
       background-image: url(${skillsbg});
       background-size: cover;
       background-position: center;
@@ -67,9 +68,10 @@ export default class Skills extends React.Component {
       p {
         font-size: 1.5rem;
       }
+      text-shadow: 2px 2px 4px #000000;
     `
 
-    const RolesSection = styled.div`
+    const ExperienceSection = styled.div`
       background-color: #EEEEEE;
       font-family: "EB Garamond";
       padding-bottom: 3rem;
@@ -92,7 +94,7 @@ export default class Skills extends React.Component {
             <SectionTitle>
               <h1 className="display-4">Objective</h1>
             </SectionTitle>
-            <p>Hard-working developer with an Engineer’s eye for efficient, creative solutions. Looking to use my coding skills to enhance the efficacy, performance, and functionality of front-end solutions for a creative, driven, and innovative organization.</p>
+            <p>Driven, analytical, Engineering graduate seeking to utilize a passion for web development and a cultivated skillset at a unique and innovative company. Experience building web applications using HTML, CSS, and the React JavaScript framework. Hard-working, organized, and efficient professional interested in a new and rewarding challenge.</p>
           </div>
         </ObjectiveSection>
         <EducationSection className="container-fluid">
@@ -102,37 +104,33 @@ export default class Skills extends React.Component {
             </SectionTitle>
             <h2><strong>B.S. in Chemical Engineering (2011)</strong></h2>
             <h3>Iowa State University</h3>
-            <p>Published highly-technical computerized research as an undergraduate student (“Mechanism of Xylobiose Hydrolysis by GH43 β-Xylosidase”, J. Phys. Chem. B)</p>
+            <p>Published highly-technical computerized research as an undergraduate student (<i>“Mechanism of Xylobiose Hydrolysis by GH43 β-Xylosidase”, J. Phys. Chem. B</i>)</p>
           </div>
         </EducationSection>
-        <ExperienceSection className="container-fluid">
+        <SkillsSummary className="container-fluid">
           <div className={contentContainerClasses}>
             <SectionTitle>
-              <h1 className="display-4">Experience</h1>
+              <h1 className="display-4">Skills Summary</h1>
             </SectionTitle>
-            <h2><strong>Iowa State University Dept. of Chemical Engineering</strong></h2>
-            <h3>Researcher</h3>
-            <p>Jan 2009–May 2010</p>
-            <p>Used university supercomputer to model quantum mechanical interaction of substrate chemical in a catalyst enzyme. Worked exclusively in terminal environment for the duration of research assignment. One of a small percentage of undergraduate students to have research published.</p>
+            <h2><strong>HTML</strong></h2>
+            <p>2+ years experience writing semantic HTML to build modern websites, including use of HTML5 elements. Knowledge of HTML SEO best practices and accessibility attributes for disabled users.</p>
+            <h2><strong>CSS</strong></h2>
+            <p>2+ years experience building rich, responsive web experiences in CSS, including use of CSS3 attributes and CSS preprocessor Sass. Utilized CSS framework Bootstrap to style my professional website and my superhero info app, WhoIsThatSuperhero.</p>
+            <h2><strong>JavaScript</strong></h2>
+            <p>Advanced knowledge of the React JavaScript framework, including complex application state management in Redux. Firm grasp of application architecture, including presentational components, functional components, state, and props.</p>
+            <h2><strong>Back-End</strong></h2>
+            <p>Familiarity with back-end web frameworks Node.js and Flask. Currently building a RESTful API service using MongoDB for my project, The Habit Journey. Experience with packet management in NPM and Yarn.</p>
           </div>
-        </ExperienceSection>
-        <SkillsSection className="container-fluid">
+        </SkillsSummary>
+        <LanguagesAndFrameworksSection className="container-fluid">
           <SectionTitle>
-            <h1 className="display-4" style={{ color: "white" }}>Skills</h1>
+            <h1 className="display-4" style={{ color: "white" }}><span style={{ display:"inline-block" }}>Languages/</span></h1>
+            <h1 className="display-4" style={{ color: "white" }}><span style={{ display:"inline-block" }}>Frameworks</span></h1>
           </SectionTitle>
           <div className="container" style={{ paddingBottom: "5vh" }}>
             <div className={imgContainerClasses}>
               <div className={imgClasses}>
-                <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer"><img className="img-fluid" src={bootstrapLogo} alt="Bootstrap 4" /></a>
-              </div>
-              <div className={imgClasses}>
                 <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer"><img className="img-fluid" src={reactLogo} alt="ReactJS" /></a>
-              </div>
-              <div className={imgClasses}>
-                <a href="https://redux.js.org/" target="_blank" rel="noopener noreferrer"><img className="img-fluid" src={reduxLogo} alt="Redux" /></a>
-              </div>
-              <div className={imgClasses}>
-                <a href="https://jestjs.io/" target="_blank" rel="noopener noreferrer"><img className="img-fluid" src={jestLogo} alt="Jest" /></a>
               </div>
               <div className={imgClasses}>
                 <a href="https://nodejs.org/en/" target="_blank" rel="noopener noreferrer"><img className="img-fluid" src={nodeLogo} alt="NodeJS" /></a>
@@ -140,52 +138,37 @@ export default class Skills extends React.Component {
               <div className={imgClasses}>
                 <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer"><img className="img-fluid" src={pyLogo} alt="Python" /></a>
               </div>
+              <div className={imgClasses}>
+                <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer"><img className="img-fluid" src={bootstrapLogo} alt="Bootstrap 4" /></a>
+              </div>
+              <div className={imgClasses}>
+                <a href="https://redux.js.org/" target="_blank" rel="noopener noreferrer"><img className="img-fluid" src={reduxLogo} alt="Redux" /></a>
+              </div>
+              <div className={imgClasses}>
+                <a href="https://jestjs.io/" target="_blank" rel="noopener noreferrer"><img className="img-fluid" src={jestLogo} alt="Jest" /></a>
+              </div>
             </div>
           </div>
-        </SkillsSection>
-        <RolesSection className="container-fluid">
+        </LanguagesAndFrameworksSection>
+        <ExperienceSection className="container-fluid">
           <SectionTitle>
-            <h1 className="display-4">Additional Roles</h1>
+            <h1 className="display-4">Experience</h1>
           </SectionTitle>
           <div className={contentContainerClasses}>
+          <div>
+              <h2><strong>Web Developer</strong></h2>
+              <h3>Freelance</h3>
+              <p>November 2018-Present</p>
+              <br />
+            </div>
             <div>
-              <h2>KXAN News</h2>
-              <h3>Social Media Producer</h3>
+              <h2><strong>Social Media Producer</strong></h2>
+              <h3>KXAN News</h3>
               <p>August 2017–October 2018</p>
               <br />
             </div>
-            <div>
-              <h2>Dot Esports</h2>
-              <h3>Video Editor/Freelance Writer</h3>
-              <p>September 2014–July 2017</p>
-              <br />
-            </div>
-            <div>
-              <h2>Singlegrain</h2>
-              <h3>Content Writer</h3>
-              <p>March 2014 – September 2014</p>
-              <br />
-            </div>
-            <div>
-              <h2>Copart</h2>
-              <h3>Asset Collection Clerk</h3>
-              <p>October 2013 – March 2014</p>
-              <br />
-            </div>
-            <div>
-              <h2>WebFilings</h2>
-              <h3>Customer Service Specialist</h3>
-              <p>July 2012 – September 2013</p>
-              <br />
-            </div>
-            <div>
-              <h2>Kemin</h2>
-              <h3>Lab Technician</h3>
-              <p>May 2012 – June 2012</p>
-              <br />
-            </div>
           </div>
-        </RolesSection>
+        </ExperienceSection>
       </div>
     )
   }

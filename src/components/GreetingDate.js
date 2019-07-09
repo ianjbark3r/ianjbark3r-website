@@ -49,8 +49,8 @@ export default class GreetingDate extends React.Component{
 
     return(
       <div>
-        <h3><span style={{ display:"inline-block" }}>It is {weekday},</span></h3>
-        <h3><span style={{ display:"inline-block" }}> {month} {this.setDate()}, {year}</span> and</h3>
+        <h3><span style={{ display:"inline-block", textShadow:'1px 1px 2px #000000' }}>It is {weekday},</span></h3>
+        <h3><span style={{ display:"inline-block", textShadow:'1px 1px 2px #000000' }}> {month} {this.setDate()}, {year}</span> and</h3>
       </div>
     )
   }
