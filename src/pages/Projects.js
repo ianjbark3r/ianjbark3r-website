@@ -6,7 +6,8 @@ import background from '../projects-bg.jpg';
 import websiteThumb from '../personal-website-thumb.png';
 import heroThumb from '../whoisthatsuperhero-thumb.png';
 import habitThumb from '../thehabitjourney-thumb.png';
-import underDev from '../under-development.png';
+
+import DarkNavigation from '../components/layout/DarkNavigation';
 
 export default class Projects extends React.Component {
   render() {
@@ -29,6 +30,7 @@ export default class Projects extends React.Component {
 
     const projects = [
       {
+        id: "003",
         img: habitThumb,
         title: "The Habit Journey",
         description: 'Lifestyle tool designed to help users build healthy habits (based on the book "Atomic Habits" by James Clear). Application layer connects to an Express.js API and MongoDB storage.',
@@ -40,6 +42,7 @@ export default class Projects extends React.Component {
         url: "https://the-habit-journey.web.app/"
       },
       {
+        id: "002",
         img: heroThumb,
         title: "WhoIsThatSuperhero",
         description: "React app that uses the Marvel API to help casual movie fans make sense of The Most Ambitious Crossover Event in History. Application state managed with Redux, API calls using Fetch.",
@@ -51,6 +54,7 @@ export default class Projects extends React.Component {
         url: "https://whoisthatsuperhero.firebaseapp.com/"
       },
       {
+        id: "001",
         img: websiteThumb,
         title: "Professional Website",
         description: "Single-page app built with Bootstrap styles and a little elbow grease. Performant code, fully responsive layout, custom CSS with Styled-Components, and serverless JavaScript contact form.",
@@ -64,20 +68,23 @@ export default class Projects extends React.Component {
     ]
 
     return (
-      <Background className="container-fluid">
-        <Title>
-          <h1 className="display-3">Projects</h1>
-        </Title>
-        <Container style={{ paddingBottom: "5vh" }}>
-          <CardColumns>
-            {projects.map(project => {
-              return (
-                <Project project={project} />
-              )
-            })}
-          </CardColumns>
-        </Container>
-      </Background>
+      <>
+        <DarkNavigation/>
+        <Background className="container-fluid">
+          <Title>
+            <h1 className="display-3">Projects</h1>
+          </Title>
+          <Container style={{ paddingBottom: "5vh" }}>
+            <CardColumns key="cardColumns">
+              {projects.map(project => {
+                return (
+                  <Project key={project.id} project={project} />
+                )
+              })}
+            </CardColumns>
+          </Container>
+        </Background>
+      </>      
     )
   }
 };

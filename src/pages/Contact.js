@@ -2,6 +2,8 @@ import React from 'react';
 import ContactForm from '../components/ContactForm.js';
 import styled from 'styled-components';
 
+import DarkNavigation from '../components/layout/DarkNavigation';
+
 export default class Contact extends React.Component {
   render() {
     const Background = styled.div`
@@ -18,12 +20,15 @@ export default class Contact extends React.Component {
     `
 
     return (
-      <Background className="container-fluid">
-        <Title>
-          <h1 className="display-3">Contact</h1>
-        </Title>
-        <ContactForm />
-      </Background>
+      <>
+        <DarkNavigation />
+        <Background className="container-fluid">
+          <Title>
+            <h1 className="display-3">Contact</h1>
+          </Title>
+          <ContactForm />
+        </Background>
+      </>
     )
   }
 };

@@ -4,6 +4,8 @@ import GreetingActivity from '../components/GreetingActivity';
 import cover from '../forest-cover.jpg';
 import styled from 'styled-components';
 
+import Navigation from '../components/layout/Navigation';
+
 export default class Home extends React.Component {
   render() {
     const Background = styled.div`
@@ -23,14 +25,18 @@ export default class Home extends React.Component {
     `
 
     return (
-      <Background className="container-fluid">
-        <Title>
-          <GreetingDate />
-          <h1 className="display-1">Ian J Barker</h1>
-          <GreetingActivity />
-          <p style={{ paddingTop: "35vh" }}><a href='https://unsplash.com/photos/LPKk3wtkC-g' style={{ color: 'white' }}>Photo by Evgeni Evgeniev on Unsplash</a></p>
-        </Title>
-      </Background>
+      <>
+      <Navigation />
+        <Background className="container-fluid">
+          <Title>
+            <GreetingDate />
+            <h1 className="display-5">Web Developer</h1>
+            <h1 className="display-1 mb-4">Ian J Barker</h1>
+            <GreetingActivity />
+            <p style={{ paddingTop: "35vh" }}><a href='https://unsplash.com/photos/LPKk3wtkC-g' style={{ color: 'white' }}>Photo by Evgeni Evgeniev on Unsplash</a></p>
+          </Title>
+        </Background>
+      </>
     )
   }
 };

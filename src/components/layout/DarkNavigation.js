@@ -5,6 +5,10 @@ import gitLogo from '../../github-logo.png';
 
   const navElements = [
     {
+      title: "Home",
+      to: "/"
+    },
+    {
       title: "Projects",
       to: "projects"
     },
@@ -18,7 +22,7 @@ import gitLogo from '../../github-logo.png';
     }
   ];
 
-export default class Navigation extends React.Component {
+export default class DarkNavigation extends React.Component {
   constructor() {
     super()
 
@@ -54,6 +58,7 @@ export default class Navigation extends React.Component {
       <header>
         <Navbar 
           dark
+          color="dark"
           className="navbar-expand-lg fixed-top" 
           role="navigation"
         >
@@ -72,11 +77,7 @@ export default class Navigation extends React.Component {
                 />
               </NavbarBrand>
             </div>
-            <NavbarToggler 
-              style={{ color: "white", filter: "drop-shadow(0px 0px 3px #222)" }} 
-              className="navbar-toggler" 
-              onClick={this.toggleNavbar} 
-            />
+            <NavbarToggler style={{ color: "white", filter: "drop-shadow(0px 0px 3px #222)" }} className="navbar-toggler" onClick={this.toggleNavbar} />
             <Collapse
               className="text-center" 
               isOpen={!this.state.collapsed} 
