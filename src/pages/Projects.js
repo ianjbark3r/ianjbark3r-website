@@ -1,11 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import { CardColumns } from 'reactstrap';
+
 import Project from '../components/Project';
+
 import background from '../projects-bg.jpg';
-import websiteThumb from '../personal-website-thumb.png';
+import grannyFabThumb from '../granny-fab-thumb.png';
 import heroThumb from '../whoisthatsuperhero-thumb.png';
 import habitThumb from '../thehabitjourney-thumb.png';
+import websiteThumb from '../personal-website-thumb.png';
 
 import DarkNavigation from '../components/layout/DarkNavigation';
 
@@ -47,6 +50,22 @@ export default class Projects extends React.Component {
           "Redux"
         ],
         url: "https://the-habit-journey.web.app/"
+      },
+      {
+        id: "004",
+        img: grannyFabThumb,
+        title: "Granny Fab",
+        concept: "Visually captivating brochure website for prominent local Austin artisan.",
+        challenges: 'UNDER DEVELOPMENT',
+        solutions: 'TBD',
+        repoUrl: '',
+        tech: [
+          "Bootstrap 4",
+          "CSS3",
+          "HTML5",
+          "Sass"
+        ],
+        url: ""
       },
       {
         id: "002",
