@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Container, CardColumns } from 'reactstrap';
+import { CardColumns } from 'reactstrap';
 import Project from '../components/Project';
 import background from '../projects-bg.jpg';
 import websiteThumb from '../personal-website-thumb.png';
@@ -14,7 +14,7 @@ export default class Projects extends React.Component {
     const Background = styled.div`
       background-image: url(${background});
       background-size: cover;
-      background-position: left;
+      background-position: center;
       background-attachment: fixed;
       overflow: auto;
       height: 100vh;
@@ -33,11 +33,18 @@ export default class Projects extends React.Component {
         id: "003",
         img: habitThumb,
         title: "The Habit Journey",
-        description: 'Lifestyle tool designed to help users build healthy habits (based on the book "Atomic Habits" by James Clear). Application layer connects to an Express.js API and MongoDB storage.',
-        skills: [
+        concept: "Companion app to James Clear's habit-building book 'Atomic Habits'",
+        challenges: 'Building my first API, re-building said API due to tech constraints, auth, and account data storage.',
+        solutions: 'After building an initial web app, I discovered that deploying my server file through Firebase Functions prohibited initiating a MongoDB database. In response, I migrated the web app code to Cloud Firestore, which helped reinforce my knowledge of NoSQL databases. Auth handled using Firebase Authentication, while user data is modeled with scalability and future features in mind.',
+        repoUrl: 'https://github.com/ianjbark3r/the-habit-journey',
+        tech: [
+          "AJAX",
+          "Bootstrap 4",
+          "Express.js/Node.js",
+          "Firebase Auth",
+          "MongoDB/Firestore",
           "React",
-          "Express.js",
-          "MongoDB"
+          "Redux"
         ],
         url: "https://the-habit-journey.web.app/"
       },
@@ -45,9 +52,14 @@ export default class Projects extends React.Component {
         id: "002",
         img: heroThumb,
         title: "WhoIsThatSuperhero",
-        description: "React app that uses the Marvel API to help casual movie fans make sense of The Most Ambitious Crossover Event in History. Application state managed with Redux, API calls using Fetch.",
-        skills: [
-          "Marvel API",
+        concept: "Single-page application that helps casual Marvel fans explore the superheroes of The Avengers.",
+        challenges: 'Learning Redux, asynchronous state management, understanding the "functional component vs container component" paradigm.',
+        solutions: 'After initial trepidation at the amount of boilerplate required by Redux, I quickly became comfortable with its overall flow and structure. This knowledge lead to the discovery of a common design pattern for async data handling that solved several AJAX-related race conditions',
+        repoUrl: 'https://github.com/ianjbark3r/whoisthatsuperhero',
+        tech: [
+          "AJAX",
+          "Firebase",
+          "Marvel Comics API",
           "React",
           "Redux"
         ],
@@ -57,11 +69,16 @@ export default class Projects extends React.Component {
         id: "001",
         img: websiteThumb,
         title: "Professional Website",
-        description: "Single-page app built with Bootstrap styles and a little elbow grease. Performant code, fully responsive layout, custom CSS with Styled-Components, and serverless JavaScript contact form.",
-        skills: [
+        concept: "Portfolio and contact portal for my free-lance web development work.",
+        challenges: 'Learning a new front-end framework, styling a JavaScript application.',
+        solutions: 'After an initial learning curve–and some heavy reading of documentation–I was able to build a baseline competency with React, leveraging my previous HTML experience. Additionally, Styled-Components helped make the transition from CSS to CSS in JS much easier.',
+        repoUrl: 'https://github.com/ianjbark3r/ianjbark3r-website',
+        tech: [
+          "NPM",
           "React",
-          "Bootstrap",
-          "Styled-Components"
+          "React Router",
+          "Styled-Components",
+          "Webpack"
         ],
         url: "https://ianjbaker.com"
       }
@@ -74,15 +91,13 @@ export default class Projects extends React.Component {
           <Title>
             <h1 className="display-3">Projects</h1>
           </Title>
-          <Container style={{ paddingBottom: "5vh" }}>
-            <CardColumns key="cardColumns">
-              {projects.map(project => {
-                return (
-                  <Project key={project.id} project={project} />
-                )
-              })}
-            </CardColumns>
-          </Container>
+          <CardColumns key="cardColumns">
+            {projects.map(project => {
+              return (
+                <Project key={project.id} project={project} />
+              )
+            })}
+          </CardColumns>
         </Background>
       </>      
     )

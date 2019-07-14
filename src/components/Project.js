@@ -3,17 +3,26 @@ import PropTypes from 'prop-types';
 import { 
   Card, 
   CardImg, 
-  CardText, 
   CardBody,
   CardTitle 
 } from 'reactstrap';
 
 export default class Project extends React.Component {
   render() {
-    const { id, img, title, description, skills, url } = this.props.project;
+    const { 
+      id, 
+      img, 
+      title,
+      concept,
+      challenges,
+      solutions, 
+      repoUrl, 
+      tech, 
+      url 
+    } = this.props.project;
 
     return (
-      <Card key={`Card${id}`} className="shadow-lg mb-4">
+      <Card key={`Card${id}`} className="shadow-sm mb-4">
         <a key={`PhotoLink${id}`} href={url}>
           <CardImg 
             top
@@ -25,19 +34,48 @@ export default class Project extends React.Component {
         <CardBody key={`CardBody${id}`}>
           <CardTitle key={`CardTitle${id}`} style={{ textAlign:"center" }}>
             <strong key={`CardTitleBold${id}`}>
-              <a key={`CardTitleLink${id}`} href={url}>{title}</a>
+              <a 
+                key={`CardTitleLink${id}`} 
+                href={url} 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                {title}
+              </a>
             </strong>                      
           </CardTitle>
-          <CardText key={`CardDescription${id}`} style={{ paddingBottom: "1vh" }}>
-            {description}
-          </CardText>
-          <ul key={`SkillsList${id}`}>
-            {skills.map(skill => {
+          <p className="mt-2 text-center">
+            <strong>
+              <a
+                key={`RepoLink${id}`} 
+                href={repoUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                (View repo)
+              </a>
+            </strong>
+          </p>
+          <div key={`CardDescription${id}`}>
+            <strong>Concept</strong>
+            <p>
+              {concept}
+            </p>
+            <strong>Challenges</strong>
+            <p>
+              {challenges}
+            </p>
+            <strong>Solutions</strong>
+            <p>
+              {solutions}
+            </p>
+          </div>
+          <strong> Technologies</strong>
+          <ul style={{ paddingTop:".5em" }} key={`TechList${id}`}>
+            {tech.map(tech => {
               return (
-                <li key={`Skill${id}${skill}`}>
-                  <strong key={`SkillBold${id}${skill}`}>
-                    {skill}
-                  </strong>
+                <li key={`Tech${id}${tech}`}>
+                  {tech}
                 </li>
               )
             })}

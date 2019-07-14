@@ -79,7 +79,7 @@ export default class DarkNavigation extends React.Component {
             </div>
             <NavbarToggler style={{ color: "white", filter: "drop-shadow(0px 0px 3px #222)" }} className="navbar-toggler" onClick={this.toggleNavbar} />
             <Collapse
-              className="text-center" 
+              className="text-right" 
               isOpen={!this.state.collapsed} 
               id="navbar-main" 
               navbar

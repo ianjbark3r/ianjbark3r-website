@@ -18,7 +18,7 @@ export default class Home extends React.Component {
 
     const Title = styled.div`
       color: white;
-      padding-top: 25vh;
+      padding-top: 20vh;
       text-align: center;
       font-family: "EB Garamond";
       text-shadow: 2px 2px 4px #000;
@@ -33,7 +33,7 @@ export default class Home extends React.Component {
             <h1 className="display-5">Web Developer</h1>
             <h1 className="display-1 mb-4">Ian J Barker</h1>
             <GreetingActivity />
-            <p style={{ paddingTop: "35vh" }}><a href='https://unsplash.com/photos/LPKk3wtkC-g' style={{ color: 'white' }}>Photo by Evgeni Evgeniev on Unsplash</a></p>
+            <p style={{ marginTop: "10vh" }}><a href='https://unsplash.com/photos/LPKk3wtkC-g' style={{ color: 'white' }}>(Photo by Evgeni Evgeniev on Unsplash)</a></p>
           </Title>
         </Background>
       </>

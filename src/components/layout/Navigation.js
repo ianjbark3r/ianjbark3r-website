@@ -5,6 +5,10 @@ import gitLogo from '../../github-logo.png';
 
   const navElements = [
     {
+      title: "Home",
+      to: "/"
+    },
+    {
       title: "Projects",
       to: "projects"
     },
@@ -78,7 +82,7 @@ export default class Navigation extends React.Component {
               onClick={this.toggleNavbar} 
             />
             <Collapse
-              className="text-center" 
+              className="text-right" 
               isOpen={!this.state.collapsed} 
               id="navbar-main" 
               navbar
