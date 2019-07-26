@@ -89,11 +89,11 @@ export default class Projects extends React.Component {
       background-color: #EEE;
       p {
         font-family: "EB Garamond";
-        font-size: 1.2rem;
+        font-size: 1.3rem;
       }
       li {
         font-family: "EB Garamond";
-        font-size: 1.2rem;
+        font-size: 1.3rem;
       }
       button {
         font-family: sans-serif
@@ -106,11 +106,11 @@ export default class Projects extends React.Component {
       padding-bottom: 8vh;
       p {
         font-family: "EB Garamond";
-        font-size: 1.2rem;
+        font-size: 1.3rem;
       }
       li {
         font-family: "EB Garamond";
-        font-size: 1.2rem;
+        font-size: 1.3rem;
       }
       button {
         font-family: sans-serif
