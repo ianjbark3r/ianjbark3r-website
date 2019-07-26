@@ -6,15 +6,17 @@ import DarkNavigation from '../components/layout/DarkNavigation';
 
 export default class Contact extends React.Component {
   render() {
+    const rowClasses = "row justify-content-center"
+    const colClasses = "col-md-5 col-sm-8"
+
     const Background = styled.div`
-      background-color: #DDDDDD;
+      background-color: #EEE;
       height: 100vh;
       overflow: auto;
     `
 
     const Title = styled.div`
       padding-top: 12.5vh;
-      padding-bottom: 5vh;
       text-align: center;
       font-family: "EB Garamond";
     `
@@ -23,10 +25,23 @@ export default class Contact extends React.Component {
       <>
         <DarkNavigation />
         <Background className="container-fluid">
-          <Title>
-            <h1 className="display-3">Contact</h1>
-          </Title>
-          <ContactForm />
+          <div className={rowClasses}>
+            <div className={colClasses}>
+              <Title>
+                <h1 className="display-3">Contact</h1>
+              </Title>
+            </div>
+          </div>
+          <div className={rowClasses}>
+            <div className={colClasses}>
+              <hr className="mb-4" />
+            </div>            
+          </div>
+          <div className={rowClasses}>
+            <div className={colClasses}>    
+              <ContactForm />
+            </div>            
+          </div>          
         </Background>
       </>
     )

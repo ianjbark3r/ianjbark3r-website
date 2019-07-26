@@ -62,23 +62,21 @@ export default class contactform extends React.Component {
 
     if (!this.state.submitted) {
     return (
-      <div className="container col-xl-4 col-lg-6 col-md-8 col-sm-12">
-        <form id="myform" style={{ paddingBottom: "5vh" }} onSubmit={this.handleSubmit.bind(this)}>
-          <FormGroup>
-            <Label for="nameField">Name</Label>
-            <Input type="name" name="name" id="nameField" placeholder="Your name" onChange={this.handleChange.bind(this)} />
-          </FormGroup>
-          <FormGroup>
-            <Label for="emailField">Email</Label>
-            <Input type="email" name="emailAddress" id="emailField" placeholder="Your email" onChange={this.handleChange.bind(this)} />
-          </FormGroup>
-          <FormGroup>
-            <Label for="messageField">Message</Label>
-            <Input type="textarea" rows="8" name="message" id="messageField" onChange={this.handleChange.bind(this)} />
-          </FormGroup>
-          <Button id="button">Submit</Button>
-        </form>
-      </div>
+      <form id="myform" style={{ paddingBottom: "5vh" }} onSubmit={this.handleSubmit.bind(this)}>
+        <FormGroup>
+          <Label for="nameField">Name</Label>
+          <Input type="name" name="name" id="nameField" placeholder="Your name" onChange={this.handleChange.bind(this)} />
+        </FormGroup>
+        <FormGroup>
+          <Label for="emailField">Email</Label>
+          <Input type="email" name="emailAddress" id="emailField" placeholder="Your email" onChange={this.handleChange.bind(this)} />
+        </FormGroup>
+        <FormGroup>
+          <Label for="messageField">Message</Label>
+          <Input type="textarea" rows="8" name="message" id="messageField" onChange={this.handleChange.bind(this)} />
+        </FormGroup>
+        <Button id="button">Submit</Button>
+      </form>
       )
     } else {
       return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import NavElement from '../NavElement';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav } from 'reactstrap';
-import gitLogo from '../../github-logo.png';
+import gitLogo from '../../images/github-logo.png';
 
   const navElements = [
     {

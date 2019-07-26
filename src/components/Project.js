@@ -1,11 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { 
-  Card, 
-  CardImg, 
-  CardBody,
-  CardTitle 
-} from 'reactstrap';
 
 export default class Project extends React.Component {
   render() {
@@ -21,18 +14,38 @@ export default class Project extends React.Component {
       url 
     } = this.props.project;
 
-    return (
-      <Card key={`Card${id}`} className="shadow-sm mb-4">
-        <a key={`PhotoLink${id}`} href={url}>
-          <CardImg 
-            top
-            key={`CardImg${id}`} 
-            src={img} 
-            alt="project thumbnail" 
-          />
-        </a>
-        <CardBody key={`CardBody${id}`}>
-          <CardTitle key={`CardTitle${id}`} style={{ textAlign:"center" }}>
+    if (this.props.index % 2 === 0) {
+      return (
+        <>
+          <div className="d-md-none d-block col-sm-8">
+            <a key={`SmallPhotoLink${id}`} href={url}>
+              <img
+                style={{
+                  height:"auto",
+                  width:"100%"
+                }}
+                className="shadow mb-4 mt-2"
+                key={`CardImg${id}`} 
+                src={img} 
+                alt="project thumbnail" 
+              />
+            </a>
+          </div>
+          <div className="d-md-block d-none col-md-5">
+            <a key={`LargePhotoLink${id}`} href={url}>
+              <img
+                style={{
+                  height:"auto",
+                  width:"100%"
+                }}
+                className="shadow mb-4 mt-2"
+                key={`CardImg${id}`} 
+                src={img} 
+                alt="project thumbnail" 
+              />
+            </a>
+          </div>
+          <div className="col-md-4 col-sm-8">
             <strong key={`CardTitleBold${id}`}>
               <a 
                 key={`CardTitleLink${id}`} 
@@ -40,57 +53,139 @@ export default class Project extends React.Component {
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                {title}
+                <h1 className="pb-2 text-center">
+                  {title}
+                </h1>
               </a>
-            </strong>                      
-          </CardTitle>
-          <p className="mt-2 text-center">
-            <strong>
-              <a
-                key={`RepoLink${id}`} 
-                href={repoUrl} 
+            </strong>
+            <p className="mt-2 text-center">
+              <strong>
+                <a
+                  key={`RepoLink${id}`} 
+                  href={repoUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <button className="btn btn-primary btn-sm shadow-sm my-3">
+                    view repo
+                  </button>
+                </a>
+              </strong>
+            </p>
+            <hr className="mb-4" />
+            <div key={`CardDescription${id}`}>
+              <h4>Concept</h4>
+              <p>
+                {concept}
+              </p>
+              <h4>Challenges</h4>
+              <p>
+                {challenges}
+              </p>
+              <h4>Solutions</h4>
+              <p>
+                {solutions}
+              </p>
+            </div>
+            <h4> Technologies</h4>
+            <ul style={{ paddingTop:".5em" }} key={`TechList${id}`}>
+              {tech.map(tech => {
+                return (
+                  <li key={`Tech${id}${tech}`}>
+                    {tech}
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+        </>
+      )
+    } else {
+      return (
+        <>
+          <div className="d-md-none d-block col-sm-8">
+            <a key={`SmallPhotoLink${id}`} href={url}>
+              <img
+                style={{
+                  height:"auto",
+                  width:"100%"
+                }}
+                className="shadow mb-4 mt-2"
+                key={`CardImg${id}`} 
+                src={img} 
+                alt="project thumbnail" 
+              />
+            </a>
+          </div>
+          <div className="col-md-4 col-sm-8">
+            <strong key={`CardTitleBold${id}`}>
+              <a 
+                key={`CardTitleLink${id}`} 
+                href={url} 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                (View repo)
+                <h1 className="pb-2 text-center">
+                  {title}
+                </h1>
               </a>
             </strong>
-          </p>
-          <div key={`CardDescription${id}`}>
-            <strong>Concept</strong>
-            <p>
-              {concept}
+            <p className="mt-2 text-center">
+              <strong>
+                <a
+                  key={`RepoLink${id}`} 
+                  href={repoUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <button className="btn btn-primary btn-sm shadow-sm my-3">
+                    view repo
+                  </button>
+                </a>
+              </strong>
             </p>
-            <strong>Challenges</strong>
-            <p>
-              {challenges}
-            </p>
-            <strong>Solutions</strong>
-            <p>
-              {solutions}
-            </p>
+            <hr className="mb-4" />
+            <div key={`CardDescription${id}`}>
+              <h4>Concept</h4>
+              <p>
+                {concept}
+              </p>
+              <h4>Challenges</h4>
+              <p>
+                {challenges}
+              </p>
+              <h4>Solutions</h4>
+              <p>
+                {solutions}
+              </p>
+            </div>
+            <h4> Technologies</h4>
+            <ul style={{ paddingTop:".5em" }} key={`TechList${id}`}>
+              {tech.map(tech => {
+                return (
+                  <li key={`Tech${id}${tech}`}>
+                    {tech}
+                  </li>
+                )
+              })}
+            </ul>
           </div>
-          <strong> Technologies</strong>
-          <ul style={{ paddingTop:".5em" }} key={`TechList${id}`}>
-            {tech.map(tech => {
-              return (
-                <li key={`Tech${id}${tech}`}>
-                  {tech}
-                </li>
-              )
-            })}
-          </ul>
-        </CardBody>
-      </Card>
-    )
+          <div className="d-md-block d-none col-md-5">
+            <a key={`LargePhotoLink${id}`} href={url}>
+              <img
+                style={{
+                  height:"auto",
+                  width:"100%"
+                }}
+                className="shadow mb-4 mt-2"
+                key={`CardImg${id}`} 
+                src={img} 
+                alt="project thumbnail" 
+              />
+            </a>
+          </div>
+        </>
+      )
+    }
   }
 }
-
-Card.propTypes = {
-  className: PropTypes.string
-};
-
-CardImg.propTypes = {
-  className: PropTypes.string,
-  top: PropTypes.bool
-};

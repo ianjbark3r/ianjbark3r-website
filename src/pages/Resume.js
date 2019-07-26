@@ -1,22 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import bootstrapLogo from '../bootstrap-logo.png';
-import educationbg from '../education-bg.jpg';
-// import jestLogo from '../jest-logo.png';
-import nodeLogo from '../node-logo.png';
-import pyLogo from '../python-logo.png'
-import reactLogo from '../react-logo.png';
-import reduxLogo from '../redux-logo.png'
-import skillsbg from '../skills-bg.jpg';
+import bootstrapLogo from '../images/bootstrap-logo.png';
+import educationbg from '../images/education-bg.jpg';
+import jestLogo from '../images/jest-logo.png';
+import nodeLogo from '../images/node-logo.png';
+import pyLogo from '../images/python-logo.png'
+import reactLogo from '../images/react-logo.png';
+import reduxLogo from '../images/redux-logo.png'
+import skillsbg from '../images/skills-bg.jpg';
 
 import DarkNavigation from '../components/layout/DarkNavigation';
 
 export default class Skills extends React.Component {
   render() {
-    const imgClasses = "m-4 w-auto d-inline-block";
+    const imgClasses = "m-3 w-auto d-inline-block img-fluid";
     const imgContainerClasses = "d-sm-flex flex-row justify-content-center align-items-center";
-    const contentContainerClasses = "container-fluid col-lg-6 col-md-8 col-sm-12"
+    const colClasses = "mx-2 col-lg-6 col-md-8 col-sm-10"
+    const languagesColClasses = "mx-4 col-md-12 col-sm-10"
+    const rowClasses = "row justify-content-center"
 
     const PageTitle = styled.div`
       font-family: "EB Garamond";
@@ -31,29 +33,30 @@ export default class Skills extends React.Component {
     `
 
     const ObjectiveSection = styled.div`
-      padding-bottom: 3rem;
+      background-color: #FFF;
       font-family: "EB Garamond";
+      padding-bottom: 3rem;
       p {
         font-size: 1.5rem;
       }
     `
 
     const EducationSection = styled.div`
-      background-image: url(${educationbg});
-      background-size: cover;
-      background-position: center;
       background-attachment: fixed;
+      background-image: url(${educationbg});
+      background-position: center;
+      background-size: cover;
       color: white;
       font-family: "EB Garamond";
       padding-bottom: 3rem;
+      text-shadow: 2px 2px 4px #000000;
       p {
         font-size: 1.5rem;
       }
-      text-shadow: 2px 2px 4px #000000;
     `
 
     const SkillsSummary = styled.div`
-      background-color: #EEEEEE;
+      background-color: #FFF;
       font-family: "EB Garamond";
       padding-bottom: 3rem;
       p {
@@ -62,10 +65,10 @@ export default class Skills extends React.Component {
     `
 
     const LanguagesAndFrameworksSection = styled.div`
+      background-attachment: fixed;
       background-image: url(${skillsbg});
       background-size: cover;
       background-position: center;
-      background-attachment: fixed;
       font-family: "EB Garamond";
       padding-bottom: 3rem;
       p {
@@ -75,7 +78,7 @@ export default class Skills extends React.Component {
     `
 
     const ExperienceSection = styled.div`
-      background-color: #EEEEEE;
+      background-color: #FFF;
       font-family: "EB Garamond";
       padding-bottom: 3rem;
       text-align: center;
@@ -87,47 +90,58 @@ export default class Skills extends React.Component {
     return (
       <>
         <DarkNavigation/>
-        <div>
-          <PageTitle>
-            <h1 className="display-3">Résumé</h1>
-          </PageTitle>
-          <div className="container">
-            <hr />
-          </div>
-          <ObjectiveSection className="container-fluid">
-            <div className={contentContainerClasses}>
-              <SectionTitle>
-                <h1 className="display-4">Objective</h1>
-              </SectionTitle>
-              <p>Driven, analytical, Engineering graduate seeking to utilize a passion for web development and a cultivated skillset at a unique and innovative company. Experience building web applications using HTML, CSS, and the React JavaScript framework. Hard-working, organized, and efficient professional interested in a new and rewarding challenge.</p>
+        <div className="container-fluid">
+          <div style={{ backgroundColor:"#FFF" }} className={rowClasses}>
+            <div className={colClasses}>
+              <PageTitle>
+                <h1 className="display-3">Résumé</h1>
+              </PageTitle>
+              <div>
+                <hr />
+              </div>
             </div>
-          </ObjectiveSection>
-          <LanguagesAndFrameworksSection className="container-fluid">
-            <SectionTitle>
-              <h1 className="display-4" style={{ color: "white" }}><span style={{ display:"inline-block" }}>Languages / Frameworks</span></h1>
-            </SectionTitle>
-            <div className="container" style={{ paddingBottom: "5vh" }}>
-              <div className={imgContainerClasses}>
-                <div className={imgClasses}>
-                  <a 
-                    href="https://reactjs.org" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                    <img 
-                      className="img-fluid" 
-                      src={reactLogo} 
-                      alt="ReactJS" 
-                    />
-                  </a>
-                </div>
+          </div>
+          <ObjectiveSection className={rowClasses}>
+              <div className={colClasses}>      
+                <SectionTitle>
+                  <h1 className="display-4">Objective</h1>
+                </SectionTitle>
+                <p>Driven, analytical, Engineering graduate seeking to utilize a passion for web development and a cultivated skillset at a unique and innovative company. Experience building web applications using HTML, CSS, and the React JavaScript framework. Hard-working, organized, and efficient professional interested in a new and rewarding challenge.</p>
+              </div>
+            </ObjectiveSection> 
+          <LanguagesAndFrameworksSection className={rowClasses}>
+            <div className={languagesColClasses}>     
+              <SectionTitle>
+                <h1 className="display-4" style={{ color: "white" }}><span style={{ display:"inline-block" }}>Languages / Frameworks</span></h1>
+              </SectionTitle>
+              <div style={{ paddingBottom: "5vh" }}>
+                <div className={imgContainerClasses}>
+                  <div className={imgClasses}>
+                    <a 
+                      href="https://reactjs.org" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        style={{ 
+                          filter: "drop-shadow(4px 4px 4px #000)"
+                        }}
+                        className="img-fluid" 
+                        src={reactLogo} 
+                        alt="ReactJS" 
+                      />
+                    </a>
+                  </div>
                 <div className={imgClasses}>
                   <a 
                     href="https://redux.js.org/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
-                    <img 
+                    <img
+                      style={{ 
+                        filter: "drop-shadow(4px 4px 4px #000)"
+                      }} 
                       className="img-fluid" 
                       src={reduxLogo} 
                       alt="Redux" 
@@ -140,7 +154,10 @@ export default class Skills extends React.Component {
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
-                    <img 
+                    <img
+                      style={{ 
+                        filter: "drop-shadow(4px 4px 4px #000)"
+                      }}
                       className="img-fluid" 
                       src={nodeLogo} 
                       alt="NodeJS" /></a>
@@ -151,7 +168,10 @@ export default class Skills extends React.Component {
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
-                    <img 
+                    <img
+                      style={{ 
+                        filter: "drop-shadow(4px 4px 4px #000)"
+                      }}
                       className="img-fluid" 
                       src={pyLogo} 
                       alt="Python" 
@@ -164,31 +184,38 @@ export default class Skills extends React.Component {
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
-                    <img 
+                    <img
+                      style={{ 
+                        filter: "drop-shadow(4px 4px 4px #000)"
+                      }}
                       className="img-fluid" 
                       src={bootstrapLogo} 
                       alt="Bootstrap 4" 
                     />
                   </a>
                 </div>
-                {/* <div className={imgClasses}>
+                <div className={imgClasses}>
                   <a 
                     href="https://jestjs.io/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                   >
-                    <img 
+                    <img
+                      style={{ 
+                        filter: "drop-shadow(4px 4px 4px #000)"
+                      }} 
                       className="img-fluid" 
                       src={jestLogo} 
                       alt="Jest" 
                     />
                   </a>
-                </div> */}
+                </div>
               </div>
             </div>
+          </div>
           </LanguagesAndFrameworksSection>
-          <SkillsSummary className="container-fluid">
-            <div className={contentContainerClasses}>
+          <SkillsSummary className={rowClasses}>
+            <div className={colClasses}>
               <SectionTitle>
                 <h1 className="display-4">Skills Summary</h1>
               </SectionTitle>
@@ -226,8 +253,8 @@ export default class Skills extends React.Component {
               </p>
             </div>
           </SkillsSummary>
-          <EducationSection className="container-fluid">
-            <div className={contentContainerClasses}>
+          <EducationSection className={rowClasses}>
+            <div className={colClasses}>
               <SectionTitle>
                 <h1 className="display-4">Education</h1>
               </SectionTitle>
@@ -236,12 +263,12 @@ export default class Skills extends React.Component {
               <p>Published highly-technical computerized research as an undergraduate student (<i>“Mechanism of Xylobiose Hydrolysis by GH43 β-Xylosidase”, J. Phys. Chem. B</i>)</p>
             </div>
           </EducationSection>
-          <ExperienceSection className="container-fluid">
-            <SectionTitle>
-              <h1 className="display-4">Experience</h1>
-            </SectionTitle>
-            <div className={contentContainerClasses}>
-            <div>
+          <ExperienceSection className={rowClasses}>
+            <div className={colClasses}>
+              <SectionTitle>
+                <h1 className="display-4">Experience</h1>
+              </SectionTitle>
+              <div>
                 <h2><strong>Web Developer</strong></h2>
                 <h3>Freelance</h3>
                 <p>November 2018-Present</p>
@@ -256,7 +283,7 @@ export default class Skills extends React.Component {
             </div>
           </ExperienceSection>
         </div>
-      </>      
+      </>    
     )
   }
 };
