@@ -13,6 +13,7 @@ export default class NavElement extends React.Component {
             <p 
               style={{ 
                 color:"white", 
+                fontFamily: "'Roboto', sans-serif",
                 textShadow:"0px 0px 2px #000"
               }} 
               key={`Item${this.props.index}`} 

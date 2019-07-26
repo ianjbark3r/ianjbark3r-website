@@ -15,7 +15,7 @@ export default class Projects extends React.Component {
   render() {
     const projects = [
       {
-        id: "003",
+        id: "03",
         img: habitThumb,
         title: "The Habit Journey",
         concept: "Companion app to James Clear's habit-building book 'Atomic Habits'",
@@ -34,7 +34,7 @@ export default class Projects extends React.Component {
         url: "https://the-habit-journey.web.app/"
       },
       {
-        id: "004",
+        id: "04",
         img: grannyFabThumb,
         title: "Granny Fab",
         concept: "Visually captivating brochure website for prominent local Austin artisan.",
@@ -50,7 +50,7 @@ export default class Projects extends React.Component {
         url: ""
       },
       {
-        id: "002",
+        id: "02",
         img: heroThumb,
         title: "Who Is That Superhero?",
         concept: "Single-page application that helps casual Marvel fans explore the superheroes of The Avengers.",
@@ -67,7 +67,7 @@ export default class Projects extends React.Component {
         url: "https://whoisthatsuperhero.firebaseapp.com/"
       },
       {
-        id: "001",
+        id: "01",
         img: websiteThumb,
         title: "Professional Website",
         concept: "Portfolio and contact portal for my free-lance web development work.",
@@ -87,14 +87,21 @@ export default class Projects extends React.Component {
 
     const Background = styled.div`
       background-color: #EEE;
+
+      h1, h2, h3, h4 {
+        font-family: 'EB Garamond', serif;
+      }
+
       p {
-        font-family: "EB Garamond";
-        font-size: 1.3rem;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2rem;
       }
+
       li {
-        font-family: "EB Garamond";
-        font-size: 1.3rem;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2rem;
       }
+
       button {
         font-family: sans-serif
       }
@@ -104,13 +111,18 @@ export default class Projects extends React.Component {
       background-color: #FFF;
       padding-top: 8vh;
       padding-bottom: 8vh;
+
+      h1, h2, h3, h4 {
+        font-family: 'EB Garamond', serif;
+      }
+
       p {
-        font-family: "EB Garamond";
-        font-size: 1.3rem;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2rem;
       }
       li {
-        font-family: "EB Garamond";
-        font-size: 1.3rem;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2rem;
       }
       button {
         font-family: sans-serif
@@ -120,7 +132,7 @@ export default class Projects extends React.Component {
     const Title = styled.div`
       padding-top: 12.5vh;
       text-align: center;
-      font-family: "EB Garamond";
+      font-family: 'Roboto', sans-serif;
     `
 
     return (
@@ -181,10 +193,26 @@ export default class Projects extends React.Component {
             }
           })}
           <div className="row justify-content-center">
-            <div style={{ paddingTop:"10vh", paddingBottom:"12vh" }} className="col-lg-4 col-md-6 col-sm-8 col-9">
-              <p style={{ fontSize:"2.0rem" }} className="lead text-center">
-                <span style={{ display:"inline-block" }}>Like what you see?</span> <span style={{ display:"inline-block" }}><Link to="/contact">Let's talk.</Link></span>
-              </p>
+            <div 
+              style={{ 
+                paddingTop:"10vh", 
+                paddingBottom:"12vh" 
+              }} 
+              className="col-lg-4 col-md-6 col-sm-8 col-9"
+            >
+              <h1 
+                style={{ fontSize:"2.0rem" }} 
+                className="lead text-center"
+              >
+                <span style={{ display:"inline-block" }}>
+                  Like what you see?
+                </span> 
+                <span style={{ display:"inline-block" }}>
+                  <Link to="/contact">
+                    Let's talk.
+                  </Link>
+                </span>
+              </h1>
               <hr/>
             </div>
           </div>

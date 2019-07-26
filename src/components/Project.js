@@ -53,8 +53,10 @@ export default class Project extends React.Component {
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <h1 className="pb-2 text-center">
-                  {title}
+                <h1 className="pb-2 text-center display-4">
+                  <strong>
+                    {title}
+                  </strong>
                 </h1>
               </a>
             </strong>
@@ -73,30 +75,46 @@ export default class Project extends React.Component {
               </strong>
             </p>
             <hr className="mb-4" />
-            <div key={`CardDescription${id}`}>
-              <h4>Concept</h4>
+            <div key={`ProjectDescription${id}`}>
+              <h2>
+                <strong>
+                  Concept
+                </strong>
+              </h2>
               <p>
                 {concept}
               </p>
-              <h4>Challenges</h4>
+              <h2>
+                <strong>
+                  Challenges
+                </strong>
+              </h2>
               <p>
                 {challenges}
               </p>
-              <h4>Solutions</h4>
+              <h2>
+                <strong>
+                  Solutions
+                </strong>
+              </h2>
               <p>
                 {solutions}
               </p>
+              <h2> 
+                <strong>
+                  Technologies
+                </strong>
+              </h2>
+              <ul style={{ paddingTop:".5em" }} key={`TechList${id}`}>
+                {tech.map(tech => {
+                  return (
+                    <li key={`Tech${id}${tech}`}>
+                      {tech}
+                    </li>
+                  )
+                })}
+              </ul>
             </div>
-            <h4> Technologies</h4>
-            <ul style={{ paddingTop:".5em" }} key={`TechList${id}`}>
-              {tech.map(tech => {
-                return (
-                  <li key={`Tech${id}${tech}`}>
-                    {tech}
-                  </li>
-                )
-              })}
-            </ul>
           </div>
         </>
       )
@@ -125,8 +143,10 @@ export default class Project extends React.Component {
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <h1 className="pb-2 text-center">
-                  {title}
+                <h1 className="pb-2 text-center display-4">
+                  <strong>
+                    {title}
+                  </strong>
                 </h1>
               </a>
             </strong>
@@ -145,30 +165,46 @@ export default class Project extends React.Component {
               </strong>
             </p>
             <hr className="mb-4" />
-            <div key={`CardDescription${id}`}>
-              <h4>Concept</h4>
+            <div key={`ProjectDescription${id}`}>
+            <h2>
+                <strong>
+                  Concept
+                </strong>
+              </h2>
               <p>
                 {concept}
               </p>
-              <h4>Challenges</h4>
+              <h2>
+                <strong>
+                  Challenges
+                </strong>
+              </h2>
               <p>
                 {challenges}
               </p>
-              <h4>Solutions</h4>
+              <h2>
+                <strong>
+                  Solutions
+                </strong>
+              </h2>
               <p>
                 {solutions}
               </p>
+              <h2> 
+                <strong>
+                  Technologies
+                </strong>
+              </h2>
+              <ul style={{ paddingTop:".5em" }} key={`TechList${id}`}>
+                {tech.map(tech => {
+                  return (
+                    <li key={`Tech${id}${tech}`}>
+                      {tech}
+                    </li>
+                  )
+                })}
+              </ul>
             </div>
-            <h4> Technologies</h4>
-            <ul style={{ paddingTop:".5em" }} key={`TechList${id}`}>
-              {tech.map(tech => {
-                return (
-                  <li key={`Tech${id}${tech}`}>
-                    {tech}
-                  </li>
-                )
-              })}
-            </ul>
           </div>
           <div className="d-md-block d-none col-md-5">
             <a key={`LargePhotoLink${id}`} href={url}>

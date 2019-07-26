@@ -27,8 +27,9 @@ export default class Skills extends React.Component {
     `
 
     const SectionTitle = styled.div`
-      padding-top: 6vh;
-      padding-bottom: 3vh;
+    font-family: "EB Garamond";
+      padding-top: 8vh;
+      padding-bottom: 4vh;
       text-align: center;
     `
 
@@ -36,8 +37,10 @@ export default class Skills extends React.Component {
       background-color: #FFF;
       font-family: "EB Garamond";
       padding-bottom: 3rem;
+      
       p {
-        font-size: 1.5rem;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2rem;
       }
     `
 
@@ -47,20 +50,29 @@ export default class Skills extends React.Component {
       background-position: center;
       background-size: cover;
       color: white;
-      font-family: "EB Garamond";
       padding-bottom: 3rem;
-      text-shadow: 2px 2px 4px #000000;
+
+      h2, h3 {
+        font-family: "EB Garamond";
+      }
+
       p {
-        font-size: 1.5rem;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2rem;
       }
     `
 
     const SkillsSummary = styled.div`
       background-color: #FFF;
-      font-family: "EB Garamond";
       padding-bottom: 3rem;
+
+      h2, h3 {
+        font-family: "EB Garamond";
+      }
+
       p {
-        font-size: 1.5rem;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2rem;
       }
     `
 
@@ -69,21 +81,26 @@ export default class Skills extends React.Component {
       background-image: url(${skillsbg});
       background-size: cover;
       background-position: center;
-      font-family: "EB Garamond";
       padding-bottom: 3rem;
+
       p {
-        font-size: 1.5rem;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2rem;
       }
-      text-shadow: 2px 2px 4px #000000;
     `
 
     const ExperienceSection = styled.div`
       background-color: #FFF;
-      font-family: "EB Garamond";
       padding-bottom: 3rem;
       text-align: center;
+
+      h2, h3 {
+        font-family: "EB Garamond";
+      }
+
       p {
-        font-size: 1.5rem;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2rem;
       }
     `
 
@@ -103,7 +120,7 @@ export default class Skills extends React.Component {
           </div>
           <ObjectiveSection className={rowClasses}>
               <div className={colClasses}>      
-                <SectionTitle>
+                <SectionTitle style={{ paddingTop:"2vh" }}>
                   <h1 className="display-4">Objective</h1>
                 </SectionTitle>
                 <p>Driven, analytical, Engineering graduate seeking to utilize a passion for web development and a cultivated skillset at a unique and innovative company. Experience building web applications using HTML, CSS, and the React JavaScript framework. Hard-working, organized, and efficient professional interested in a new and rewarding challenge.</p>
