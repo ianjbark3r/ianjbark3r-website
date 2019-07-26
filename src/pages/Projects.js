@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import Project from '../components/Project';
@@ -179,6 +180,14 @@ export default class Projects extends React.Component {
               )
             }
           })}
+          <div className="row justify-content-center">
+            <div style={{ paddingTop:"10vh", paddingBottom:"12vh" }} className="col-lg-4 col-md-6 col-sm-8 col-9">
+              <p style={{ fontSize:"2.0rem" }} className="lead text-center">
+                <span style={{ display:"inline-block" }}>Like what you see?</span> <span style={{ display:"inline-block" }}><Link to="/contact">Let's talk.</Link></span>
+              </p>
+              <hr/>
+            </div>
+          </div>
         </Background>
       </>
     )
