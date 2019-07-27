@@ -82,7 +82,7 @@ export default class Home extends React.Component {
             <Activity>
               <GreetingActivity />
             </Activity>
-            <Credit style={{ marginTop: "20vh", marginBottom: "5vh" }}>
+            <Credit style={{ marginTop: "30vh", marginBottom: "5vh" }}>
               <a 
                 href='https://unsplash.com/photos/LPKk3wtkC-g' 
                 style={{ color: 'white' }}

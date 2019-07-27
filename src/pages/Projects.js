@@ -156,6 +156,7 @@ export default class Projects extends React.Component {
                     paddingBottom:"8vh" 
                   }} 
                   className="row justify-content-center"
+                  key={`ProjectWrapper${project.id}`}
                 >
                   <Project
                     index={index}
@@ -172,6 +173,7 @@ export default class Projects extends React.Component {
                     paddingBottom:"8vh" 
                   }} 
                   className="row justify-content-center"
+                  key={`ProjectWrapper${project.id}`}
                 >
                   <Project
                     index={index}
@@ -182,7 +184,10 @@ export default class Projects extends React.Component {
               )
             } else {
               return (
-                <LightBackground className="row justify-content-center">
+                <LightBackground 
+                  className="row justify-content-center"
+                  key={`ProjectWrapper${project.id}`}
+                >
                   <Project
                     index={index}
                     project={project} 
