@@ -9,7 +9,7 @@
     "emailjs": "^2.2.0",
     "emailjs-com": "^2.4.1",
     "escape-string-regexp": "^2.0.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "mobx": "^5.15.4",
     "mobx-react": "^5.4.4",
     "popper": "^1.0.1",
