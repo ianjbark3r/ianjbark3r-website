@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "ajv": "^5.5.2",
-    "bootstrap": "^4.4.1",
+    "bootstrap": "^4.5.0",
     "bootstrap-without-jquery": "^1.0.5",
     "emailjs": "^2.2.0",
     "emailjs-com": "^2.4.1",
@@ -21,7 +21,7 @@
     "react-snap-scroll": "^0.0.5",
     "reactstrap": "^6.5.0",
     "styled-components": "^4.4.1",
-    "typescript": "^3.8.3"
+    "typescript": "^3.9.5"
   },
   "scripts": {
     "start": "react-scripts start",
