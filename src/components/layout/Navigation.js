@@ -26,11 +26,11 @@ export default class Navigation extends React.Component {
       <header>
         <Navbar 
           dark
-          className="navbar-expand-lg fixed-top" 
+          className="fixed-top" 
           role="navigation"
         >
           <div className="container">
-            <div className="navbar-header">
+            <div className="navbar-header mr-auto">
               <NavbarBrand 
                 style={{ color: "white" }} 
                 href="https://github.com/ianjbark3r" 

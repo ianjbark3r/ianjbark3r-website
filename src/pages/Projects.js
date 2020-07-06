@@ -4,17 +4,25 @@ import styled from 'styled-components';
 
 import Project from '../components/Project';
 
-import grannyFabThumb from '../images/granny-fab-thumb.jpg';
-import heroThumb from '../images/whoisthatsuperhero-thumb.png';
-import habitThumb from '../images/thehabitjourney-thumb.png';
-import websiteThumb from '../images/personal-website-thumb.png';
+import grannyFabThumb1 from '../images/granny-fab-thumb.jpg';
+import heroThumb1 from '../images/whoisthatsuperhero-thumb.png';
+import heroThumb2 from '../images/whoisthatsuperhero-thumb-2.jpg';
+import heroThumb3 from '../images/whoisthatsuperhero-thumb-3.png';
+import habitThumb1 from '../images/thehabitjourney-thumb.png';
+import habitThumb2 from '../images/thehabitjourney-thumb-2.png';
+import habitThumb3 from '../images/thehabitjourney-thumb-3.png';
+import websiteThumb1 from '../images/personal-website-thumb.png';
+import websiteThumb2 from '../images/personal-website-thumb-2.jpg';
+import websiteThumb3 from '../images/personal-website-thumb-3.png';
 
 export default class Projects extends React.Component {
   render() {
     const projects = [
       {
         id: "03",
-        img: habitThumb,
+        img1: habitThumb1,
+        img2: habitThumb2,
+        img3: habitThumb3,
         title: "The Habit Journey",
         concept: "Companion app to James Clear's habit-building book 'Atomic Habits'",
         challenges: 'Building my first API, re-building said API due to tech constraints, auth, and account data storage.',
@@ -33,7 +41,8 @@ export default class Projects extends React.Component {
       },
       {
         id: "04",
-        img: grannyFabThumb,
+        img1: grannyFabThumb1,
+        img2: "",
         title: "Granny Fab",
         concept: "Visually captivating brochure website for prominent local Austin artisan and accompanying OPA for ordering bespoke COVID masks.",
         challenges: 'Granny Fab makes visually stunning work, so the design needed to get out of the way and showcase that fact. But even while the understated fonts and buttons were designed to defer to the bright, large-format photography, the entire experience had to be sleek and sophisticated to capture the ethos of the brand.',
@@ -50,7 +59,9 @@ export default class Projects extends React.Component {
       },
       {
         id: "02",
-        img: heroThumb,
+        img1: heroThumb1,
+        img2: heroThumb2,
+        img3: heroThumb3,
         title: "Who Is That Superhero?",
         concept: "Single-page application that helps casual Marvel fans explore the superheroes of The Avengers.",
         challenges: 'Learning Redux, asynchronous state management, understanding the "functional component vs container component" paradigm.',
@@ -67,7 +78,9 @@ export default class Projects extends React.Component {
       },
       {
         id: "01",
-        img: websiteThumb,
+        img1: websiteThumb1,
+        img2: websiteThumb2,
+        img3: websiteThumb3,
         title: "Professional Website",
         concept: "Portfolio and contact portal for my free-lance web development work.",
         challenges: 'Learning a new front-end framework, styling a JavaScript application.',

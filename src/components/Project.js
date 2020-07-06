@@ -4,7 +4,9 @@ export default class Project extends React.Component {
   render() {
     const { 
       id, 
-      img, 
+      img1,
+      img2,
+      img3, 
       title,
       concept,
       challenges,
@@ -17,33 +19,49 @@ export default class Project extends React.Component {
     if (this.props.index % 2 === 0) {
       return (
         <>
-          <div className="d-md-none d-block col-sm-8">
-            <a key={`SmallPhotoLink${id}`} href={url}>
-              <img
-                style={{
-                  height:"auto",
-                  width:"100%"
-                }}
-                className="shadow mb-4 mt-2"
-                key={`CardImg${id}`} 
-                src={img} 
-                alt="project thumbnail" 
-              />
-            </a>
-          </div>
           <div className="d-md-block d-none col-md-4">
-            <a key={`LargePhotoLink${id}`} href={url}>
-              <img
-                style={{
-                  height:"auto",
-                  width:"100%"
-                }}
-                className="shadow mb-4 mt-2"
-                key={`CardImg${id}`} 
-                src={img} 
-                alt="project thumbnail" 
-              />
-            </a>
+            {img1 && (
+              <a key={`SmallPhotoLink${id}`} href={url}>
+                <img
+                  style={{
+                    height:"auto",
+                    width:"100%"
+                  }}
+                  className="shadow mb-4 mt-2"
+                  key={`CardImg${id}`} 
+                  src={img1} 
+                  alt="project thumbnail" 
+                />
+              </a>
+            )}
+            {img2 && (
+              <a key={`SmallPhotoLink${id}`} href={url}>
+                <img
+                  style={{
+                    height:"auto",
+                    width:"100%"
+                  }}
+                  className="shadow mb-4 mt-2"
+                  key={`CardImg${id}`} 
+                  src={img2} 
+                  alt="project thumbnail" 
+                />
+              </a>
+            )}
+            {img3 && (
+              <a key={`SmallPhotoLink${id}`} href={url}>
+                <img
+                  style={{
+                    height:"auto",
+                    width:"100%"
+                  }}
+                  className="shadow mb-4 mt-2"
+                  key={`CardImg${id}`} 
+                  src={img3} 
+                  alt="project thumbnail" 
+                />
+              </a>
+            )}
           </div>
           <div className="col-md-4 col-sm-8">
             <strong key={`CardTitleBold${id}`}>
@@ -130,7 +148,7 @@ export default class Project extends React.Component {
                 }}
                 className="shadow mb-4 mt-2"
                 key={`CardImg${id}`} 
-                src={img} 
+                src={img1} 
                 alt="project thumbnail" 
               />
             </a>
@@ -207,18 +225,48 @@ export default class Project extends React.Component {
             </div>
           </div>
           <div className="d-md-block d-none col-md-4">
-            <a key={`LargePhotoLink${id}`} href={url}>
-              <img
-                style={{
-                  height:"auto",
-                  width:"100%"
-                }}
-                className="shadow mb-4 mt-2"
-                key={`CardImg${id}`} 
-                src={img} 
-                alt="project thumbnail" 
-              />
-            </a>
+            {img1 && (
+              <a key={`SmallPhotoLink${id}`} href={url}>
+                <img
+                  style={{
+                    height:"auto",
+                    width:"100%"
+                  }}
+                  className="shadow mb-4 mt-2"
+                  key={`CardImg${id}`} 
+                  src={img1} 
+                  alt="project thumbnail" 
+                />
+              </a>
+            )}
+            {img2 && (
+              <a key={`SmallPhotoLink${id}`} href={url}>
+                <img
+                  style={{
+                    height:"auto",
+                    width:"100%"
+                  }}
+                  className="shadow mb-4 mt-2"
+                  key={`CardImg${id}`} 
+                  src={img2} 
+                  alt="project thumbnail" 
+                />
+              </a>
+            )}
+            {img3 && (
+              <a key={`SmallPhotoLink${id}`} href={url}>
+                <img
+                  style={{
+                    height:"auto",
+                    width:"100%"
+                  }}
+                  className="shadow mb-4 mt-2"
+                  key={`CardImg${id}`} 
+                  src={img3} 
+                  alt="project thumbnail" 
+                />
+              </a>
+            )}
           </div>
         </>
       )
