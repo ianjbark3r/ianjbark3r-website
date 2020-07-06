@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import Project from '../components/Project';
 
 import grannyFabThumb1 from '../images/granny-fab-thumb.jpg';
+import grannyFabThumb2 from '../images/granny-fab-thumb-2.jpg';
+import grannyFabThumb3 from '../images/granny-fab-thumb-3.jpg';
 import heroThumb1 from '../images/whoisthatsuperhero-thumb.png';
 import heroThumb2 from '../images/whoisthatsuperhero-thumb-2.jpg';
 import heroThumb3 from '../images/whoisthatsuperhero-thumb-3.png';
@@ -42,7 +44,8 @@ export default class Projects extends React.Component {
       {
         id: "04",
         img1: grannyFabThumb1,
-        img2: "",
+        img2: grannyFabThumb2,
+        img3: grannyFabThumb3,
         title: "Granny Fab",
         concept: "Visually captivating brochure website for prominent local Austin artisan and accompanying OPA for ordering bespoke COVID masks.",
         challenges: 'Granny Fab makes visually stunning work, so the design needed to get out of the way and showcase that fact. But even while the understated fonts and buttons were designed to defer to the bright, large-format photography, the entire experience had to be sleek and sophisticated to capture the ethos of the brand.',
