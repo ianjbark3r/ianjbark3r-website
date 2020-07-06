@@ -10,7 +10,7 @@ import reactLogo from '../images/react-logo.png';
 import reduxLogo from '../images/redux-logo.png'
 import skillsbg from '../images/skills-bg.jpg';
 
-import DarkNavigation from '../components/layout/DarkNavigation';
+import Navigation from '../components/layout/Navigation';
 
 export default class Skills extends React.Component {
   render() {
@@ -106,7 +106,7 @@ export default class Skills extends React.Component {
 
     return (
       <>
-        <DarkNavigation/>
+        <Navigation/>
         <div className="container-fluid">
           <div style={{ backgroundColor:"#FFF" }} className={rowClasses}>
             <div className={colClasses}>

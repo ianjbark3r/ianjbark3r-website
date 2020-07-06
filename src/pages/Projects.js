@@ -4,12 +4,10 @@ import styled from 'styled-components';
 
 import Project from '../components/Project';
 
-import grannyFabThumb from '../images/granny-fab-thumb.png';
+import grannyFabThumb from '../images/granny-fab-thumb.jpg';
 import heroThumb from '../images/whoisthatsuperhero-thumb.png';
 import habitThumb from '../images/thehabitjourney-thumb.png';
 import websiteThumb from '../images/personal-website-thumb.png';
-
-import DarkNavigation from '../components/layout/DarkNavigation';
 
 export default class Projects extends React.Component {
   render() {
@@ -37,11 +35,12 @@ export default class Projects extends React.Component {
         id: "04",
         img: grannyFabThumb,
         title: "Granny Fab",
-        concept: "Visually captivating brochure website for prominent local Austin artisan.",
-        challenges: 'UNDER DEVELOPMENT',
-        solutions: 'TBD',
-        repoUrl: '',
+        concept: "Visually captivating brochure website for prominent local Austin artisan and accompanying OPA for ordering bespoke COVID masks.",
+        challenges: 'Granny Fab makes visually stunning work, so the design needed to get out of the way and showcase that fact. But even while the understated fonts and buttons were designed to defer to the bright, large-format photography, the entire experience had to be sleek and sophisticated to capture the ethos of the brand.',
+        solutions: 'By dividing the design into both mobile and large-format components, I was able to tightly control the final look for all devices to maintain the same polish as the brand itself. Furthermore, a simple library called AnchorLink provided a smooth and elegant interface with little fuss.',
+        repoUrl: 'https://github.com/ianjbark3r/granny-fab',
         tech: [
+          "React",
           "Bootstrap 4",
           "CSS3",
           "HTML5",
@@ -137,12 +136,11 @@ export default class Projects extends React.Component {
 
     return (
       <>
-        <DarkNavigation/>
         <Background className="container-fluid">
           <div className="row justify-content-center">
             <div className="col-sm-9 text-center">
               <Title>
-                <h1 className="display-3">Projects</h1>
+                <h1 className="display-3">My Projects</h1>
               </Title>
               <hr />
             </div>
@@ -209,16 +207,29 @@ export default class Projects extends React.Component {
                 style={{ fontSize:"2.0rem" }} 
                 className="lead text-center"
               >
-                <span style={{ display:"inline-block" }}>
+                <span style={{ display:"block" }}>
                   Like what you see?
                 </span> 
-                <span style={{ display:"inline-block" }}>
+                <span style={{ display:"block" }}>
                   <Link to="/contact">
                     Let's talk.
                   </Link>
                 </span>
               </h1>
               <hr/>
+              <h1 
+                style={{ fontSize:"2.0rem" }} 
+                className="lead text-center"
+              >
+                <span style={{ display:"inline-block" }}>
+                  Need more info?
+                </span> 
+                <span style={{ display:"inline-block" }}>
+                  <Link to="/resume">
+                    Check out my résumé.
+                  </Link>
+                </span>
+              </h1>
             </div>
           </div>
         </Background>

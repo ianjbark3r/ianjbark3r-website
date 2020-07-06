@@ -31,7 +31,7 @@ export default class Project extends React.Component {
               />
             </a>
           </div>
-          <div className="d-md-block d-none col-md-5">
+          <div className="d-md-block d-none col-md-4">
             <a key={`LargePhotoLink${id}`} href={url}>
               <img
                 style={{
@@ -166,7 +166,7 @@ export default class Project extends React.Component {
             </p>
             <hr className="mb-4" />
             <div key={`ProjectDescription${id}`}>
-            <h2>
+              <h2>
                 <strong>
                   Concept
                 </strong>
@@ -206,7 +206,7 @@ export default class Project extends React.Component {
               </ul>
             </div>
           </div>
-          <div className="d-md-block d-none col-md-5">
+          <div className="d-md-block d-none col-md-4">
             <a key={`LargePhotoLink${id}`} href={url}>
               <img
                 style={{

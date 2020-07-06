@@ -1,26 +1,9 @@
 import React from 'react';
-import NavElement from '../NavElement';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav } from 'reactstrap';
-import gitLogo from '../../images/github-logo.png';
+import { Link } from 'react-router-dom';
+import { NavItem, Navbar, NavbarBrand, Nav } from 'reactstrap';
 
-  const navElements = [
-    {
-      title: "Home",
-      to: "/"
-    },
-    {
-      title: "Projects",
-      to: "projects"
-    },
-    {
-      title: "Résumé",
-      to: "resume"
-    },
-    {
-      title: "Contact",
-      to: "contact"
-    }
-  ];
+import gitLogo from '../../images/github-logo.png';
+import homeIcon from '../../images/home-icon.png';
 
 export default class Navigation extends React.Component {
   constructor() {
@@ -30,21 +13,6 @@ export default class Navigation extends React.Component {
     this.state = {
       collapsed: true
     };
-  }
-
-  getTOD() {
-    const d = new Date();
-    const tod = d.getHours();
-
-    if (tod <=2) {
-      return 'evening';
-    } else if (tod > 2 && tod < 12) {
-      return 'morning';
-    } else if (tod >= 12 && tod < 18) {
-      return 'afternoon';
-    } else if (tod >= 18) {
-      return 'evening';
-    }
   }
 
   toggleNavbar() {
@@ -70,36 +38,19 @@ export default class Navigation extends React.Component {
                 rel="noopener noreferrer"
               >
                 <img 
-                  style={{ filter: "drop-shadow(0px 0px 1px #000)", width: 20 }}
+                  style={{ width: 20 }}
                   src={gitLogo}
                   alt="Github logo" 
                 />
               </NavbarBrand>
             </div>
-            <NavbarToggler 
-              style={{ color: "white", filter: "drop-shadow(0px 0px 3px #222)" }} 
-              className="navbar-toggler" 
-              onClick={this.toggleNavbar} 
-            />
-            <Collapse
-              className="text-right" 
-              isOpen={!this.state.collapsed} 
-              id="navbar-main" 
-              navbar
-            >
-              <Nav style={{ color:"white" }} className="ml-auto" navbar>
-                {navElements.map((navElement, index) => {
-                  return (
-                    <NavElement 
-                      key={index} 
-                      navElement={navElement} 
-                      onClick={this.toggleNavbar} 
-                      index={index} 
-                    />
-                  )
-                })}
-              </Nav>
-            </Collapse>
+            <Nav style={{ color:"white" }} className="ml-auto" navbar>
+              <NavItem>
+                <Link to="/">
+                  <img src={homeIcon} alt="home" />
+                </Link>
+              </NavItem>
+            </Nav>
           </div>
         </Navbar>
       </header>

@@ -2,7 +2,7 @@ import React from 'react';
 import ContactForm from '../components/ContactForm.js';
 import styled from 'styled-components';
 
-import DarkNavigation from '../components/layout/DarkNavigation';
+import Navigation from '../components/layout/Navigation';
 
 export default class Contact extends React.Component {
   render() {
@@ -23,7 +23,7 @@ export default class Contact extends React.Component {
 
     return (
       <>
-        <DarkNavigation />
+        <Navigation />
         <Background className="container-fluid">
           <div className={rowClasses}>
             <div className={colClasses}>
