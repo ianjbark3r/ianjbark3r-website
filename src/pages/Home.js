@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import Navigation from '../components/layout/Navigation';
 import Projects from './Projects';
+import Footer from '../components/layout/Footer';
 
 export default class Home extends React.Component {
   render() {
@@ -91,6 +92,7 @@ export default class Home extends React.Component {
           </Title>
         </Background>
         <Projects />
+        <Footer />
       </>
     )
   }
