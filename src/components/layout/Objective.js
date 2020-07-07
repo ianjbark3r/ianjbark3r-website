@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const colClasses = "mx-2 col-lg-6 col-md-8 col-sm-10"
-const rowClasses = "row justify-content-center";
+import { colClasses } from '../../Styles';
+import { rowClasses } from '../../Styles';
 
 const ObjectiveSection = styled.div `
     background-color: #FFF;

@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import Education from '../components/layout/Education';
 import Experience from '../components/layout/Experience';

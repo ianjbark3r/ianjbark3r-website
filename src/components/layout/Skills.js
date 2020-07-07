@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const rowClasses = "row justify-content-center";
-const colClasses = "mx-2 col-lg-6 col-md-8 col-sm-10";
+import { colClasses } from '../../Styles';
+import { rowClasses } from '../../Styles';
 
 const SectionTitle = styled.div `
     font-family: "EB Garamond";

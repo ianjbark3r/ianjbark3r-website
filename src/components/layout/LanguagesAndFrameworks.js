@@ -9,10 +9,11 @@ import reactLogo from '../../images/react-logo.png';
 import reduxLogo from '../../images/redux-logo.png';
 import skillsbg from '../../images/skills-bg.jpg';
 
+import { rowClasses } from '../../Styles';
+
 const imgClasses = "m-3 w-auto d-inline-block img-fluid";
 const imgContainerClasses = "d-sm-flex flex-row justify-content-center align-items-center";
 const languagesColClasses = "mx-4 col-md-12 col-sm-10";
-const rowClasses = "row justify-content-center";
 
 const LanguagesAndFrameworksSection = styled.div `
     background-attachment: fixed;
