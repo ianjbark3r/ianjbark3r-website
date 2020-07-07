@@ -105,7 +105,7 @@ export default class Skills extends React.Component {
     `
 
     return (
-      <>
+      <div className="container-fluid">
         <Navigation/>
         <div style={{ backgroundColor:"#FFF" }} className={rowClasses}>
           <div className={colClasses}>
@@ -298,7 +298,7 @@ export default class Skills extends React.Component {
             </div>
           </div>
         </ExperienceSection>
-      </>    
+      </div>    
     )
   }
 };

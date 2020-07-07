@@ -73,9 +73,7 @@ export default class Home extends React.Component {
     return (
       <div className="container-fluid">
         <div className="row">
-          <div className="col-8">
-            <Navigation />
-          </div>
+          <Navigation />
         </div>
         <div className="row">
           <Background className="col">
