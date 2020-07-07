@@ -14,44 +14,44 @@ const ProjectImages = (props) => {
       {img1 && (
         <a key={`link-${id}-01`} href={url}>
           <img
-              style={{
+            style={{
               height:"auto",
               width:"100%"
-              }}
-              className="shadow mb-4 mt-2"
-              key={`img-${id}-01`} 
-              src={img1} 
-              alt="project thumbnail" 
+            }}
+            className="shadow mb-4 mt-2"
+            key={`img-${id}-01`} 
+            src={img1} 
+            alt="project thumbnail" 
           />
         </a>
       )}
       {img2 && (
-          <a key={`link-${id}-02`} href={url}>
+        <a key={`link-${id}-02`} href={url}>
           <img
-              style={{
+            style={{
               height:"auto",
               width:"100%"
-              }}
-              className="shadow mb-4 mt-2"
-              key={`img-${id}-02`} 
-              src={img2} 
-              alt="project thumbnail" 
+            }}
+            className="shadow mb-4 mt-2"
+            key={`img-${id}-02`} 
+            src={img2} 
+            alt="project thumbnail" 
           />
-          </a>
+        </a>
       )}
       {img3 && (
-          <a key={`link-${id}-03`} href={url}>
+        <a key={`link-${id}-03`} href={url}>
           <img
-              style={{
+            style={{
               height:"auto",
               width:"100%"
-              }}
-              className="shadow mb-4 mt-2"
-              key={`img-${id}-03`} 
-              src={img3} 
-              alt="project thumbnail" 
+            }}
+            className="shadow mb-4 mt-2"
+            key={`img-${id}-03`} 
+            src={img3} 
+            alt="project thumbnail" 
           />
-          </a>
+        </a>
       )}
     </div>
   )

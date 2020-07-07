@@ -18,18 +18,14 @@ const ProjectDescription = (props) => {
       <div className="d-md-none d-block col-sm-8">
         <a key={`mobile-link-${id}`} href={url}>
           <img
-            style={{
-              height:"auto",
-              width:"100%"
-            }}
-            className="shadow mb-4 mt-2"
+            className="shadow mb-4 mt-2 img-fluid"
             key={`mobile-img-${id}`} 
             src={img1} 
             alt="project thumbnail" 
           />
         </a>
       </div>
-      <div className="col-md-4 col-sm-8">
+      <div className="col-md-4 col-sm-8 mx-4">
         <strong key={`title-${id}`}>
           <a 
             key={`title-link-${id}`} 
