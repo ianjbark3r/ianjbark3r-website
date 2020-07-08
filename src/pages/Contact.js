@@ -1,6 +1,5 @@
 import React from 'react';
 import ContactForm from '../components/ContactForm.js';
-import styled from 'styled-components';
 
 import Navigation from '../components/layout/Navigation';
 

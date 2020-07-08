@@ -1,6 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Button, FormGroup, Label, Input, } from 'reactstrap';
+import { Message } from '../Styles';
 
 export default class contactform extends React.Component {
   constructor(props) {
@@ -56,10 +56,6 @@ export default class contactform extends React.Component {
   }
 
   render() {
-    const Message = styled.div`
-      text-align: center;
-    `
-
     if (!this.state.submitted) {
     return (
       <form 

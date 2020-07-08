@@ -1,32 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
 
-const Background = styled.div `
-    background-color: #EEE;
-
-    h1, h2, h3, h4 {
-      font-family: 'EB Garamond', serif;
-    }
-
-    p {
-      font-family: 'Roboto', sans-serif;
-      font-size: 1.2rem;
-    }
-
-    li {
-      font-family: 'Roboto', sans-serif;
-      font-size: 1.2rem;
-    }
-
-    button {
-      font-family: sans-serif
-    }
-  `
+import { CTAdiv } from '../../Styles';
 
 const CTA = (props) => {
   return (
-    <Background className="row justify-content-center">
+    <CTAdiv className="row justify-content-center">
       <div 
       style={{ 
           paddingTop:"10vh", 
@@ -62,7 +41,7 @@ const CTA = (props) => {
         </span>
       </h1>
       </div>
-    </Background>
+    </CTAdiv>
   )
 }
 

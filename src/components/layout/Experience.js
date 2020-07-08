@@ -1,28 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
 
-import { colClasses, rowClasses } from '../../Styles';
-
-const ExperienceSection = styled.div `
-    background-color: #FFF;
-    padding-bottom: 3rem;
-    text-align: center;
-
-    h2, h3 {
-      font-family: "EB Garamond";
-    }
-
-    p {
-      font-family: 'Roboto', sans-serif;
-      font-size: 1.2rem;
-    }
-  `
-const SectionTitle = styled.div `
-  font-family: "EB Garamond";
-    padding-top: 8vh;
-    padding-bottom: 4vh;
-    text-align: center;
-  `
+import { 
+  colClasses, 
+  ExperienceSection, 
+  rowClasses, 
+  SectionTitle 
+} from '../../Styles';
 
 const Experience = () => {
   return (

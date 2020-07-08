@@ -1,28 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
 
-import { colClasses, rowClasses } from '../../Styles';
-
-const SectionTitle = styled.div `
-    font-family: "EB Garamond";
-    padding-top: 8vh;
-    padding-bottom: 4vh;
-    text-align: center;
-  `
-
-const SkillsSummary = styled.div `
-    background-color: #FFF;
-    padding-bottom: 3rem;
-
-    h2, h3 {
-      font-family: "EB Garamond";
-    }
-
-    p {
-      font-family: 'Roboto', sans-serif;
-      font-size: 1.2rem;
-    }
-  `
+import { 
+  colClasses, 
+  rowClasses,
+  SectionTitle,
+  SkillsSummary 
+} from '../../Styles';
 
 const Skills = () => {
   return (

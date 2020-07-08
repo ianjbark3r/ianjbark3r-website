@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import bootstrapLogo from '../../images/bootstrap-logo.png';
 import jestLogo from '../../images/jest-logo.png';
@@ -7,38 +6,20 @@ import nodeLogo from '../../images/node-logo.png';
 import pyLogo from '../../images/python-logo.png';
 import reactLogo from '../../images/react-logo.png';
 import reduxLogo from '../../images/redux-logo.png';
-import skillsbg from '../../images/skills-bg.jpg';
 
-import { rowClasses } from '../../Styles';
-
-const imgClasses = "m-3 w-auto d-inline-block img-fluid";
-const imgContainerClasses = "d-sm-flex flex-row justify-content-center align-items-center";
-const languagesColClasses = "mx-4 col-md-12 col-sm-10";
-
-const LanguagesAndFrameworksSection = styled.div `
-    background-attachment: fixed;
-    background-image: url(${skillsbg});
-    background-size: cover;
-    background-position: center;
-    padding-bottom: 3rem;
-
-    p {
-      font-family: 'Roboto', sans-serif;
-      font-size: 1.2rem;
-    }
-  `
-
-const SectionTitle = styled.div `
-    font-family: "EB Garamond";
-    padding-top: 8vh;
-    padding-bottom: 4vh;
-    text-align: center;
-  `
+import { 
+  imgClasses,
+  imgContainerClasses,
+  langColClasses,
+  LaFSection, 
+  rowClasses, 
+  SectionTitle 
+} from '../../Styles';
 
 const LanguagesAndFrameworks = () => {
   return (
-    <LanguagesAndFrameworksSection className={rowClasses}>
-      <div className={languagesColClasses}>     
+    <LaFSection className={rowClasses}>
+      <div className={langColClasses}>     
         <SectionTitle>
           <h1 className="display-4" style={{ color: "white" }}><span style={{ display:"inline-block" }}>Languages / Frameworks</span></h1>
         </SectionTitle>
@@ -141,7 +122,7 @@ const LanguagesAndFrameworks = () => {
           </div>
         </div>
       </div>
-    </LanguagesAndFrameworksSection>
+    </LaFSection>
   )
 }
 

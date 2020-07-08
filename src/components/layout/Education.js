@@ -1,34 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
 
-import educationbg from '../../images/education-bg.jpg';
-
-import { colClasses, rowClasses } from '../../Styles';
-
-const EducationSection = styled.div `
-    background-attachment: fixed;
-    background-image: url(${educationbg});
-    background-position: center;
-    background-size: cover;
-    color: white;
-    padding-bottom: 3rem;
-
-    h2, h3 {
-      font-family: "EB Garamond";
-    }
-
-    p {
-      font-family: 'Roboto', sans-serif;
-      font-size: 1.2rem;
-    }
-  `
-
-const SectionTitle = styled.div `
-    font-family: "EB Garamond";
-    padding-top: 8vh;
-    padding-bottom: 4vh;
-    text-align: center;
-  `
+import { 
+  EducationSection, 
+  colClasses, 
+  rowClasses, 
+  SectionTitle 
+} from '../../Styles';
 
 const Education = () => {
   return (

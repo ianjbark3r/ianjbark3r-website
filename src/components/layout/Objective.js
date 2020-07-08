@@ -1,25 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
 
-import { colClasses, rowClasses } from '../../Styles';
-
-const ObjectiveSection = styled.div `
-    background-color: #FFF;
-    font-family: "EB Garamond";
-    padding-bottom: 3rem;
-    
-    p {
-      font-family: 'Roboto', sans-serif;
-      font-size: 1.2rem;
-    }
-  `
-
-const SectionTitle = styled.div `
-    font-family: "EB Garamond";
-    padding-top: 8vh;
-    padding-bottom: 4vh;
-    text-align: center;
-  `
+import { 
+  colClasses,
+  ObjectiveSection,
+  rowClasses,
+  SectionTitle
+} from '../../Styles';
 
 const Objective = () => {
   return (
