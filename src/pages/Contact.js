@@ -4,45 +4,37 @@ import styled from 'styled-components';
 
 import Navigation from '../components/layout/Navigation';
 
+import { 
+  ContactBG,
+  contactColClasses, 
+  rowClasses, 
+  Title 
+} from '../Styles';
+
 export default class Contact extends React.Component {
   render() {
-    const rowClasses = "row justify-content-center"
-    const colClasses = "col-md-5 col-sm-8"
-
-    const Background = styled.div`
-      background-color: #EEE;
-      height: 100vh;
-      overflow: auto;
-    `
-
-    const Title = styled.div`
-      padding-top: 12.5vh;
-      text-align: center;
-      font-family: "EB Garamond";
-    `
-
     return (
       <>
         <Navigation />
-        <Background className="container-fluid">
+        <ContactBG className="container-fluid">
           <div className={rowClasses}>
-            <div className={colClasses}>
+            <div className={contactColClasses}>
               <Title>
                 <h1 className="display-3">Contact</h1>
               </Title>
             </div>
           </div>
           <div className={rowClasses}>
-            <div className={colClasses}>
+            <div className={contactColClasses}>
               <hr className="mb-4" />
             </div>            
           </div>
           <div className={rowClasses}>
-            <div className={colClasses}>    
+            <div className={contactColClasses}>    
               <ContactForm />
             </div>            
           </div>          
-        </Background>
+        </ContactBG>
       </>
     )
   }
