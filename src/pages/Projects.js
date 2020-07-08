@@ -58,7 +58,7 @@ export default class Projects extends React.Component {
     `
 
     return (
-      <>
+      <div id="projects">
         <Background className="row justify-content-center">
           <div className="col-sm-9 text-center">
             <Title>
@@ -76,7 +76,7 @@ export default class Projects extends React.Component {
                   paddingBottom:"8vh" 
                 }} 
                 className="row justify-content-center"
-                key={`ProjectWrapper${project.id}`}
+                key={`wrapper-${project.id}`}
               >
                 <Project
                   index={index}
@@ -93,7 +93,7 @@ export default class Projects extends React.Component {
                   paddingBottom:"8vh" 
                 }} 
                 className="row justify-content-center"
-                key={`ProjectWrapper${project.id}`}
+                key={`wrapper-${project.id}`}
               >
                 <Project
                   index={index}
@@ -106,7 +106,7 @@ export default class Projects extends React.Component {
             return (
               <LightBackground 
                 className="row justify-content-center"
-                key={`ProjectWrapper${project.id}`}
+                key={`wrapper-${project.id}`}
               >
                 <Project
                   index={index}
@@ -118,7 +118,7 @@ export default class Projects extends React.Component {
           }
         })}
         <CTA />
-      </>
+      </div>
     )
   }
 };

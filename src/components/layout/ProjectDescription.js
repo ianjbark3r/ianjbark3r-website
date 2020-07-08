@@ -15,7 +15,7 @@ const ProjectDescription = (props) => {
 
   return (
     <>
-      <div className="d-md-none d-block col-sm-8">
+      <div className="d-lg-none d-block col-sm-8">
         <a key={`mobile-link-${id}`} href={url}>
           <img
             className="shadow mb-4 mt-2 img-fluid"
@@ -25,7 +25,7 @@ const ProjectDescription = (props) => {
           />
         </a>
       </div>
-      <div className="col-md-4 col-sm-8 mx-4">
+      <div className="col-lg-4 col-sm-8 mx-4">
         <strong key={`title-${id}`}>
           <a 
             key={`title-link-${id}`} 

@@ -3,8 +3,7 @@ import styled from 'styled-components';
 
 import educationbg from '../../images/education-bg.jpg';
 
-import { colClasses } from '../../Styles';
-import { rowClasses } from '../../Styles';
+import { colClasses, rowClasses } from '../../Styles';
 
 const EducationSection = styled.div `
     background-attachment: fixed;

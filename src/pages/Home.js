@@ -1,4 +1,5 @@
 import React from 'react';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import cover from '../images/forest-cover.jpg';
 import styled from 'styled-components';
 
@@ -26,7 +27,7 @@ export default class Home extends React.Component {
       height: 100vh;
     `
     const Credit = styled.p`
-      margin-top: 20vh; 
+      margin-top: 3vh; 
       margin-bottom: 5vh;
 
       a {
@@ -39,6 +40,16 @@ export default class Home extends React.Component {
         from { opacity: 0; }
         to   { opacity: 1; }
       }
+    `
+    const CTA = styled.div`
+      margin-top: 10vh;
+
+      a {
+        color: white;
+        text-decoration: underline;
+      }
+
+      animation: fadein 6.5s;
     `
 
     const JobTitle = styled.h1`
@@ -86,6 +97,13 @@ export default class Home extends React.Component {
                   <span className="d-block">functional things.</span>
                 </h3>
               </Activity>
+              <CTA>
+                <AnchorLink href="#projects">
+                  <h3>
+                    See for yourself
+                  </h3>
+                </AnchorLink>
+              </CTA>
               <Credit>
                 <a href='https://unsplash.com/photos/LPKk3wtkC-g'>
                   (Photo by Evgeni Evgeniev on Unsplash)

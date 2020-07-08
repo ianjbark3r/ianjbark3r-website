@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { colClasses } from '../../Styles';
-import { rowClasses } from '../../Styles';
+import { colClasses, rowClasses } from '../../Styles';
 
 const ExperienceSection = styled.div `
     background-color: #FFF;

@@ -10,7 +10,7 @@ const ProjectImages = (props) => {
   } = props.project.project;
 
   return (
-    <div className="d-md-block d-none col-md-4">
+    <div className="d-lg-block d-none col-lg-4">
       {img1 && (
         <a key={`link-${id}-01`} href={url}>
           <img
