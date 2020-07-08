@@ -16,10 +16,6 @@ export default class Projects extends React.Component {
           if (index === 0) {
             return (
               <ProjectsBG 
-                style={{ 
-                  paddingTop:"3vh", 
-                  paddingBottom:"8vh" 
-                }} 
                 className="row justify-content-center"
                 key={`wrapper-${project.id}`}
               >
@@ -32,11 +28,7 @@ export default class Projects extends React.Component {
             )
           } else if (index % 2 === 0) {
             return (
-              <ProjectsBG 
-                style={{ 
-                  paddingTop:"8vh", 
-                  paddingBottom:"8vh" 
-                }} 
+              <ProjectsBG
                 className="row justify-content-center"
                 key={`wrapper-${project.id}`}
               >

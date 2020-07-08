@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { ProjImages } from '../../Styles';
+
 const ProjectImages = (props) => {
   const {
     id,
@@ -10,14 +12,10 @@ const ProjectImages = (props) => {
   } = props.project.project;
 
   return (
-    <div className="d-lg-block d-none col-lg-4">
+    <ProjImages className="d-lg-block d-none col-lg-4">
       {img1 && (
         <a key={`link-${id}-01`} href={url}>
           <img
-            style={{
-              height:"auto",
-              width:"100%"
-            }}
             className="shadow mb-4 mt-2"
             key={`img-${id}-01`} 
             src={img1} 
@@ -28,10 +26,6 @@ const ProjectImages = (props) => {
       {img2 && (
         <a key={`link-${id}-02`} href={url}>
           <img
-            style={{
-              height:"auto",
-              width:"100%"
-            }}
             className="shadow mb-4 mt-2"
             key={`img-${id}-02`} 
             src={img2} 
@@ -42,10 +36,6 @@ const ProjectImages = (props) => {
       {img3 && (
         <a key={`link-${id}-03`} href={url}>
           <img
-            style={{
-              height:"auto",
-              width:"100%"
-            }}
             className="shadow mb-4 mt-2"
             key={`img-${id}-03`} 
             src={img3} 
@@ -53,7 +43,7 @@ const ProjectImages = (props) => {
           />
         </a>
       )}
-    </div>
+    </ProjImages>
   )
 }
 

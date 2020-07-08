@@ -1,22 +1,18 @@
 import React from 'react';
 
 import { colClasses,
-  PageTitle,
+  ResTitle,
   rowClasses
 } from '../../Styles';
 
 const ResumeTitle = () => {
   return (
-    <div style={{ backgroundColor:"#FFF" }} className={rowClasses}>
+    <ResTitle className={rowClasses}>
       <div className={colClasses}>
-        <PageTitle>
-          <h1 className="display-3">Résumé</h1>
-        </PageTitle>
-        <div>
-          <hr />
-        </div>
+        <h1 className="display-3">Résumé</h1>
+        <hr />
       </div>
-    </div>
+    </ResTitle>
   )
 };
 

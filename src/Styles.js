@@ -42,14 +42,16 @@ export const Message = styled.div`
 // CTA.js
 export const CTAdiv = styled.div`
   background-color: #EEE;
+  padding-top: 10vh;
+  padding-bottom: 12vh;
 
   h1, h2, h3, h4 {
     font-family: 'EB Garamond', serif;
+    font-size 2rem;
   }
-
-  p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.2rem;
+  
+  button {
+    font-family: sans-serif
   }
 
   li {
@@ -57,8 +59,14 @@ export const CTAdiv = styled.div`
     font-size: 1.2rem;
   }
 
-  button {
-    font-family: sans-serif
+
+  p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+  }
+
+  span {
+    display: block;
   }
 `
 
@@ -186,11 +194,23 @@ export const LaFSection = styled.div`
   background-image: url(${skillsbg});
   background-size: cover;
   background-position: center;
-  padding-bottom: 3rem;
+  padding-bottom: 6vh;
+
+  h1 {
+    color: white;
+  }
+
+  img {
+    filter: drop-shadow(4px 4px 4px #000);
+  }
 
   p {
     font-family: 'Roboto', sans-serif;
     font-size: 1.2rem;
+  }
+
+  span {
+    display: inline-block;
   }
 `
 
@@ -211,6 +231,8 @@ export const ObjectiveSection = styled.div`
 // Projects.js
 export const ProjectsBG = styled.div`
   background-color: #EEE;
+  padding-top: 3vh;
+  padding-bottom: 8vh;
 
   h1, h2, h3, h4 {
     font-family: 'EB Garamond', serif;
@@ -254,8 +276,18 @@ export const ProjectsBGLt = styled.div`
 `
 
 
+// ProjectImages.js
+export const ProjImages = styled.div`
+  img {
+    height: auto;
+    width: 100%;
+  }
+`
+
+
 // ResumeTitle.js
-export const PageTitle = styled.div`
+export const ResTitle = styled.div`
+  background-color: #FFF;
   font-family: "EB Garamond";
   padding-top: 12.5vh;
   text-align: center;

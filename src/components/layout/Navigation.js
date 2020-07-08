@@ -23,33 +23,35 @@ export default class Navigation extends React.Component {
 
   render() {
     return (
-      <Navbar 
-        dark
-        className="fixed-top" 
-        role="navigation"
-      >
-        <div className="navbar-header">
-          <NavbarBrand 
-            style={{ color: "white" }} 
-            href="https://github.com/ianjbark3r" 
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
-            <img 
-              style={{ width: 20 }}
-              src={gitLogo}
-              alt="Github logo" 
-            />
-          </NavbarBrand>
-        </div>
-        <Nav style={{ color:"white" }} navbar>
-          <NavItem>
-            <Link to="/">
-              <img src={homeIcon} alt="home" />
-            </Link>
-          </NavItem>
-        </Nav>
-      </Navbar>
+      <div className="row">
+        <Navbar 
+          dark
+          className="fixed-top" 
+          role="navigation"
+        >
+          <div className="navbar-header">
+            <NavbarBrand 
+              style={{ color: "white" }} 
+              href="https://github.com/ianjbark3r" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <img 
+                style={{ width: 20 }}
+                src={gitLogo}
+                alt="Github logo" 
+              />
+            </NavbarBrand>
+          </div>
+          <Nav style={{ color:"white" }} navbar>
+            <NavItem>
+              <Link to="/">
+                <img src={homeIcon} alt="home" />
+              </Link>
+            </NavItem>
+          </Nav>
+        </Navbar>
+      </div>
     )
   }
 }
