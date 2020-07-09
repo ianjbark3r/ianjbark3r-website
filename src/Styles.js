@@ -5,11 +5,12 @@ import cover from './images/forest-cover.jpg';
 import educationbg from './images/education-bg.jpg';
 import skillsbg from './images/skills-bg.jpg';
 
-export const colClasses = "mx-2 col-lg-6 col-md-8 col-sm-10";
 
 
 // Common Styles
 export const rowClasses = "row justify-content-center";
+
+export const colClasses = "mx-2 col-lg-6 col-md-8 col-sm-10";
 
 export const SectionTitle = styled.div`
   font-family: "EB Garamond";
@@ -229,9 +230,12 @@ export const ObjectiveSection = styled.div`
 
 
 // Projects.js
+const projPadTop = "12vh";
+const titleMargBot = "-4vh";
+
 export const ProjectsBG = styled.div`
   background-color: #EEE;
-  padding-top: 3vh;
+  padding-top: ${projPadTop};
   padding-bottom: 8vh;
 
   h1, h2, h3, h4 {
@@ -255,7 +259,7 @@ export const ProjectsBG = styled.div`
 
 export const ProjectsBGLt = styled.div`
   background-color: #FFF;
-  padding-top: 8vh;
+  padding-top: 12vh;
   padding-bottom: 8vh;
 
   h1, h2, h3, h4 {
@@ -270,6 +274,30 @@ export const ProjectsBGLt = styled.div`
     font-family: 'Roboto', sans-serif;
     font-size: 1.2rem;
   }
+  button {
+    font-family: sans-serif
+  }
+`
+
+export const ProjectsTitleBG = styled.div`
+  background-color: #EEE;
+  margin-bottom: ${titleMargBot};
+  padding-top: 8vh;
+
+  h1, h2, h3, h4 {
+    font-family: 'EB Garamond', serif;
+  }
+
+  p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+  }
+
+  li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+  }
+
   button {
     font-family: sans-serif
   }
