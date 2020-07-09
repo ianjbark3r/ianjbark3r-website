@@ -1,5 +1,6 @@
 import React from 'react';
 
+import CTAShort from '../components/layout/CTAShort';
 import Education from '../components/layout/Education';
 import Experience from '../components/layout/Experience';
 import LanguagesAndFrameworks from '../components/layout/LanguagesAndFrameworks';
@@ -20,6 +21,7 @@ export default class Resume extends React.Component {
         <Skills />
         <Education />
         <Experience />
+        <CTAShort />
       </div>    
     )
   }
