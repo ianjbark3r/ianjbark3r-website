@@ -14,7 +14,7 @@ const CTAShort = () => {
           </span>
           <span>
             <Link to="/contact">
-              Let's talk.
+              Let's connect.
             </Link>
           </span>
         </h1>

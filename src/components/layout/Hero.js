@@ -28,7 +28,7 @@ const Hero = () => {
             <AnchorLink href="#projects">
               <h3>
                 See for yourself
-                  </h3>
+              </h3>
             </AnchorLink>
           </CTA>
           <Credit>

@@ -24,7 +24,7 @@ const CTA = () => {
           </span> 
           <span>
             <Link to="/resume">
-                Check out my résumé.
+              Check out my résumé.
             </Link>
           </span>
         </h1>

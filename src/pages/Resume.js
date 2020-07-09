@@ -14,7 +14,7 @@ export default class Resume extends React.Component {
   render() {
     return (
       <div className="container-fluid">
-        <Navigation/>
+        <Navigation />
         <ResumeTitle />
         <Objective />
         <LanguagesAndFrameworks />
