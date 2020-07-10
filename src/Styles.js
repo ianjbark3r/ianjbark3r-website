@@ -118,34 +118,51 @@ export const Credit = styled.p`
     color: white;
   }
 
-  animation: fadein 7s;
+  animation: name 8s 1;
+  animation-delay: 4.5s;
+  animation-fill-mode: both;
 
-  @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+  @keyframes name {
+    0%{
+      opacity: 0;
+    }
+    30%{
+      opacity: 1
+    }
   }
   `
 export const CTA = styled.div`
   margin-top: 10vh;
 
-  a {
+  a { 
     color: white;
     text-decoration: underline;
   }
 
-  animation: fadein 6.5s;
+  animation: name 6s 1;
+  animation-delay: 4s;
+  animation-fill-mode: both;
+
+  @keyframes name {
+    0%{
+      opacity: 0;
+    }
+    30%{
+      opacity: 1
+    }
+  }
 `
   
-export const HomeBG = styled.div`
+export const HeroBG = styled.div`
   background-image: url(${cover});
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 110vh;
 `
 
-export const HomeTitle = styled.div`
+export const HeroTitle = styled.div`
   color: white;
-  padding-top: 30vh;
+  padding-top: 25vh;
   text-align: center;
   font-family: "EB Garamond";
   text-shadow: 2px 2px 4px #000;
@@ -154,34 +171,52 @@ export const HomeTitle = styled.div`
 export const JobTitle = styled.h1`
   font-size: 2rem;
 
-  animation: fadein 3s;
+  animation: title 3.5s 1;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
 
-  @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+  @keyframes title  {
+    0%{
+      opacity: 0;
+    }
+    30%{
+      opacity: 1;
+    }
   }
 `
   
 export const MyName = styled.h1`
-  animation: fadein 4s;
+  animation: name 4.5s 1;
+  animation-delay: 1.5s;
+  animation-fill-mode: both;
 
-  @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+  @keyframes name {
+    0%{
+      opacity: 0;
+    }
+    30%{
+      opacity: 1
+    }
   }
 `
 
 export const Tagline = styled.div`
   text-shadow: 1px 1px 2px #000000;
 
-  animation: fadein 5s;
+  animation: name 6.5s 1;
+  animation-delay: 2.5s;
+  animation-fill-mode: both;
 
-  @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+  @keyframes name {
+    0%{
+      opacity: 0;
+    }
+    60%{
+      opacity: 1
+    }
   }
 `
-
+ 
 
 // LanguagesAndFrameworks.js
 export const imgClasses = "m-3 w-auto d-inline-block img-fluid";
@@ -231,7 +266,7 @@ export const ObjectiveSection = styled.div`
 
 // Projects.js
 const projPadTop = "12vh";
-const titleMargBot = "-4vh";
+const titleMargBot = "-6vh";
 
 export const ProjectsBG = styled.div`
   background-color: #EEE;
@@ -282,7 +317,7 @@ export const ProjectsBGLt = styled.div`
 export const ProjectsTitleBG = styled.div`
   background-color: #EEE;
   margin-bottom: ${titleMargBot};
-  padding-top: 8vh;
+  padding-top: 6vh;
 
   h1, h2, h3, h4 {
     font-family: 'EB Garamond', serif;

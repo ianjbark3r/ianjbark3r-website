@@ -4,8 +4,8 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import {
   Credit,
   CTA,
-  HomeBG,
-  HomeTitle,
+  HeroBG,
+  HeroTitle,
   JobTitle,
   MyName,
   Tagline
@@ -14,8 +14,8 @@ import {
 const Hero = () => {
   return (
     <div className="row">
-      <HomeBG className="col">
-        <HomeTitle>
+      <HeroBG className="col">
+        <HeroTitle>
           <JobTitle className="mb-0">Full-Stack Developer</JobTitle>
           <MyName className="display-2 mb-2">Ian J Barker</MyName>
           <Tagline>
@@ -36,8 +36,8 @@ const Hero = () => {
               (Photo by Evgeni Evgeniev on Unsplash)
                 </a>
           </Credit>
-        </HomeTitle>
-      </HomeBG>
+        </HeroTitle>
+      </HeroBG>
     </div>
   )
 };
