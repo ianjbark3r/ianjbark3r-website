@@ -15,7 +15,6 @@
     "popper": "^1.0.1",
     "react": "^16.13.1",
     "react-anchor-link-smooth-scroll": "^1.0.12",
-    "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^16.13.1",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
