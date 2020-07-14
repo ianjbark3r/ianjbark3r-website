@@ -44,7 +44,7 @@ export const Message = styled.div`
 export const ConCTA = styled.h1`
   transform: translateX(${({ animate }) => (animate ? "0" : "-100vw")});
   transition: transform 1s;
-  transition-delay: 800;
+  transition-delay: 1.2s;
 `
 
 export const CTAdiv = styled.div`
@@ -80,7 +80,7 @@ export const CTAdiv = styled.div`
 export const ResCTA = styled.h1`
   transform: translateX(${({ animate }) => (animate ? "0" : "-100vw")});
   transition: transform 1s;
-  transition-delay: 1.5s;
+  transition-delay: 2.5s;
 `
 
 
