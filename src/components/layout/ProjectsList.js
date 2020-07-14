@@ -50,7 +50,7 @@ export const projects = [
       "HTML5",
       "Sass"
     ],
-    url: ""
+    url: "https://masks.grannyfab.com/"
   },
   {
     id: "02",
@@ -88,6 +88,6 @@ export const projects = [
       "Styled-Components",
       "Webpack"
     ],
-    url: "https://ianjbaker.com"
+    url: "https://ianjbarker.com"
   }
 ]
