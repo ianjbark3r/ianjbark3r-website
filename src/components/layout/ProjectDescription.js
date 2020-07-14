@@ -1,9 +1,19 @@
 import React from 'react';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
+
+const getConfigurableProps = () => ({
+  dynamicHeight: true,
+  showStatus: false,
+  showThumbs: false
+})
 
 const ProjectDescription = (props) => {
   const {
     id,
     img1,
+    img2,
+    img3,
     title,
     concept,
     challenges,
@@ -16,16 +26,34 @@ const ProjectDescription = (props) => {
   return (
     <>
       <div className="d-lg-none d-block col-sm-8">
-        <a key={`mobile-link-${id}`} href={url}>
-          <img
-            className="shadow mb-4 mt-2 img-fluid"
-            key={`mobile-img-${id}`} 
-            src={img1} 
-            alt="project thumbnail" 
-          />
-        </a>
+        <Carousel {...getConfigurableProps()}>
+          <a key={`mobile-link-${id}`} href={url}>
+            <img
+              className="shadow mb-4 img-fluid"
+              key={`mobile-img1-${id}`}
+              src={img1}
+              alt="project thumbnail"
+            />
+          </a>
+          <a key={`mobile-link-${id}`} href={url}>
+            <img
+              className="shadow mb-4 img-fluid"
+              key={`mobile-img2-${id}`}
+              src={img2}
+              alt="project thumbnail"
+            />
+          </a>
+          <a key={`mobile-link-${id}`} href={url}>
+            <img
+              className="shadow mb-4 img-fluid"
+              key={`mobile-img3-${id}`}
+              src={img3}
+              alt="project thumbnail"
+            />
+          </a>
+        </Carousel>
       </div>
-      <div className="col-lg-4 col-sm-8 mx-4">
+      <div className="col-lg-4 col-sm-8 mx-4 mt-4">
         <strong key={`title-${id}`}>
           <a 
             key={`title-link-${id}`} 

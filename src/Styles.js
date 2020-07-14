@@ -317,7 +317,7 @@ export const ProjectsBGLt = styled.div`
 export const ProjectsTitleBG = styled.div`
   background-color: #EEE;
   margin-bottom: ${titleMargBot};
-  padding-top: 6vh;
+  padding-top: 5vh;
 
   h1, h2, h3, h4 {
     font-family: 'EB Garamond', serif;
