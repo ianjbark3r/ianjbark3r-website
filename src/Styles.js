@@ -41,6 +41,12 @@ export const Message = styled.div`
 
 
 // CTA.js
+export const ConCTA = styled.h1`
+  transform: translateX(${({ animate }) => (animate ? "0" : "-100vw")});
+  transition: transform 1s;
+  transition-delay: 800;
+`
+
 export const CTAdiv = styled.div`
   background-color: #EEE;
   padding-top: 10vh;
@@ -69,6 +75,12 @@ export const CTAdiv = styled.div`
   span {
     display: block;
   }
+`
+
+export const ResCTA = styled.h1`
+  transform: translateX(${({ animate }) => (animate ? "0" : "-100vw")});
+  transition: transform 1s;
+  transition-delay: 1.5s;
 `
 
 

@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "ajv": "^5.5.2",
+    "aos": "^2.3.4",
     "bootstrap": "^4.5.0",
     "bootstrap-without-jquery": "^1.0.5",
     "emailjs": "^2.2.0",
