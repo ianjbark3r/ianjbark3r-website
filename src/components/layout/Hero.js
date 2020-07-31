@@ -33,7 +33,7 @@ const Hero = () => {
           </CTA>
           <Credit>
             <a href='https://unsplash.com/photos/LPKk3wtkC-g'>
-              (Photo by Evgeni Evgeniev on Unsplash)
+              (Photo by Evgeni Evgeniev)
                 </a>
           </Credit>
         </HeroTitle>
